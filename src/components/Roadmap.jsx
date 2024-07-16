@@ -3,76 +3,83 @@ import Heading from "./Heading";
 import Section from "./Section";
 import Tagline from "./Tagline";
 import { roadmap } from "../constants";
-import { check2, grid, loading1 } from "../assets";
+import { check2, grid, loading1, gradient } from "../assets"; 
+import NetworkImg from "../assets/roadmap/network.png";
+import FilesImage from "../assets/roadmap/files.png";
+import PenguinImg from "../assets/roadmap/penguin_gift.webp";
+import OpenSourceImg from "../assets/roadmap/Open_Souce.png";
+
+
 import { Gradient } from "./design/Roadmap";
 
 const Roadmap = () => (
-  <Section className="overflow-hidden" id="roadmap">
-    <div className="container md:pb-10">
-      <Heading tag="Ready to get started" title="What we’re working on" />
-
-      <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
-        {roadmap.map((item) => {
-          const status = item.status === "done" ? "Done" : "In progress";
-
-          return (
-            <div
-              className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${
-                item.colorful ? "bg-conic-gradient" : "bg-n-6"
-              }`}
-              key={item.id}
-            >
-              <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
-                <div className="absolute top-0 left-0 max-w-full">
-                  <img
-                    className="w-full"
-                    src={grid}
-                    width={550}
-                    height={550}
-                    alt="Grid"
-                  />
-                </div>
-                <div className="relative z-1">
-                  <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
-                    <Tagline>{item.date}</Tagline>
-
-                    <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
-                      <img
-                        className="mr-2.5"
-                        src={item.status === "done" ? check2 : loading1}
-                        width={16}
-                        height={16}
-                        alt={status}
-                      />
-                      <div className="tagline">{status}</div>
-                    </div>
-                  </div>
-
-                  <div className="mb-10 -my-10 -mx-15">
-                    <img
-                      className="w-full"
-                      src={item.imageUrl}
-                      width={628}
-                      height={426}
-                      alt={item.title}
-                    />
-                  </div>
-                  <h4 className="h4 mb-4">{item.title}</h4>
-                  <p className="body-2 text-n-4">{item.text}</p>
-                </div>
-              </div>
+  <>
+    <h1 className="text-white font-bold text-center text-4xl lg:text-5xl m-10">Session Roadmap</h1>
+    
+    <div className="lg:flex grid mx-12 my-20">
+      {/* Card1 */}
+      <div className="lg:flex gap-x-16">
+        <div className="lg:flex">
+          <div className="flex-1 max-w-sm bg-cardBlue rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex items-center justify-center">
+            {/* image */}
+            <img className="h-48 lg:h-65 md:h-60 object-cover px-5" src={OpenSourceImg} alt="Open Source 101"></img>
+          </div>
+          <div className="flex-2 max-w-sm bg-gray-400 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
+            <div className="text-2xl text-center p-5 font-bold lg:pb-2">Session 1: Open Source 101</div>
+            <div className="text-center px-10 pt-0 pb-3">
+              <p>Worried about being an absolute beginner in Linux? Don't fret! We've got you covered with a beginner-friendly session that serves as the perfect introduction to open-source and Linux. You'll gain a solid foundation and discover real-life applications of these technologies.</p>
             </div>
-          );
-        })}
-
-        <Gradient />
-      </div>
-
-      <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
-        <Button href="/roadmap">Our roadmap</Button>
+          </div>
+        </div>
+      
+        {/* Card2 */}
+        <div className="lg:flex mt-20 lg:mt-0">
+          <div className="flex-1 max-w-sm bg-cardBlue rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex items-center justify-center">
+            {/* image */}
+            <img className="h-48 lg:h-65 md:h-60 object-cover px-5" src={PenguinImg} alt="Echo Linux"></img>
+          </div>
+          <div className="flex-2 max-w-sm bg-gray-400 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
+            <div className="text-2xl text-center p-5 font-bold lg:pb-2">Session 2: Echo Linux</div>
+            <div className="text-center px-10 pt-0 pb-3">
+              <p>With a strong foundation in place, we will dive into the world of open-source and Linux, empowering you with comprehensive knowledge of crucial commands, the booting process, text editors, process management, and the seamless integration of pipelining techniques.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </Section>
+
+    <div className="lg:flex grid mx-12 my-20">
+      {/* Card3 */}
+      <div className="lg:flex gap-x-16">
+        <div className="lg:flex">
+          <div className="flex-1 max-w-sm bg-cardBlue rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex items-center justify-center">
+            {/* image */}
+            <img className="h-48 lg:h-65 md:h-60 object-cover px-5" src={FilesImage} alt="The File Maze"></img>
+          </div>
+          <div className="flex-2 max-w-sm bg-gray-400 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
+            <div className="text-2xl text-center p-5 font-bold lg:pb-2">Session 3: The File Maze</div>
+            <div className="text-center px-10 pt-0 pb-3">
+              <p>Guess what? Everything in Linux is a file! Here we'll explore the file system in Linux. In this enlightening session, we will familiarise ourselves with file systems, groups, users, and the diverse range of commands vital for their successful management.</p>
+            </div>
+          </div>
+        </div>
+      
+        {/* Card4 */}
+        <div className="lg:flex mt-20 lg:mt-0">
+          <div className="flex-1 max-w-sm bg-cardBlue rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex items-center justify-center">
+            {/* image */}
+            <img className="h-48 lg:h-65 md:h-60 object-cover px-5" src={NetworkImg} alt="NetVerse"></img>
+          </div>
+          <div className="flex-2 max-w-sm bg-gray-400 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
+            <div className="text-2xl text-center p-5 font-bold lg:pb-2">Session 4: NetVerse</div>
+            <div className="text-center px-10 pt-0 pb-3">
+              <p>Seeking knowledge and excitement? Join our captivating journey through the intricate worlds of GUI and CLI, unveiling the remarkable advantages of CLI. Together, we'll explore advanced commands, essential networking techniques, and many more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </>
 );
 
 export default Roadmap;

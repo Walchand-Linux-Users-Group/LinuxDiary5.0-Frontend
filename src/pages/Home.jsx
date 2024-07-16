@@ -17,11 +17,13 @@ const Home = () => {
         <Header />
         <MainScreen />
         <Hero />
+        
         <Benefits />
+        <Roadmap />
         <Collaboration />
         <Services />
         <Pricing />
-        <Roadmap />
+        
         <Footer />
       </div>
       <ButtonGradient />
