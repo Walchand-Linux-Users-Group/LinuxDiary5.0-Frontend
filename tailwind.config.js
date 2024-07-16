@@ -71,6 +71,10 @@ export default {
         "conic-gradient":
           "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
       },
+      boxShadow: {
+        'custom-inset': 'inset 0 0 30px 0 rgba(36, 10, 3, .5),-2px 0 5px 2px rgba(0, 0, 0, .4)',
+        // 'custom-outset': '',
+      },
     },
   },
   plugins: [
