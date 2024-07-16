@@ -13,6 +13,19 @@
   color-scheme: dark;
 }
 
+/* App.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.gradient-background {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0a88eb, white);
+}
+
+
 * {
   scroll-behavior: smooth
 }
