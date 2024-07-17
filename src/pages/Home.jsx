@@ -9,6 +9,7 @@ import MainScreen from "../components/MainScreen";
 import Pricing from "../components/Pricing";
 import Roadmap from "../components/Roadmap";
 import Services from "../components/Services";
+import Prizes from "../components/Prizes";
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
         <Roadmap />
         <Collaboration />
         <Services />
-        <Pricing />
+        <Prizes />
         <Footer />
       </div>
       <ButtonGradient />
