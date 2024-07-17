@@ -10,6 +10,7 @@ import Pricing from "../components/Pricing";
 import Roadmap from "../components/Roadmap";
 import Services from "../components/Services";
 import Prizes from "../components/Prizes";
+import Wargames from "../components/Wargames";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <Roadmap />
         <Collaboration />
         <Services />
+        <Wargames/>
         <Prizes />
         <Footer />
       </div>
