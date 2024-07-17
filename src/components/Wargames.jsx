@@ -13,7 +13,7 @@ const Wargames = ()=>
     </h1>
 
     <div class="flex items-center justify-center h-full lg:h-full">
-  <div class="lg:w-6/12 w-10/12 h-96 lg:h-96 lg:mt-8 items-center justify-center bg-transparent border-solid border-2 border-blue-200 rounded-xl relative overflow-hidden shadow-2xl group hover:border-purple-200 hover:bg-gradient-to-br from-blue-500 to-blue-300 transition-all duration-500 transform perspective-2500">
+  <div class="lg:w-6/12 w-10/12 h-96 lg:h-96 lg:mt-8 items-center justify-center bg-transparent border-solid border-2 border-blue-200 rounded-xl relative overflow-hidden shadow-2xl group hover:shadow-2xl hover:border-blue-500 hover:bg-gradient-to-br from-blue-500 to-blue-300 transition-all duration-500 transform perspective-2500">
    
     <div class="absolute inset-0 flex items-center justify-center flex-col bg-transparent transition-all duration-500 transform rotate-x-25 group-hover:rotate-x-0 perspective-900">
       <img class="h-60 lg:h-72 object-cover rounded-xl transition-opacity duration-500 opacity-100 group-hover:opacity-15" src={wargameImg2} alt="Cash Prize" />
@@ -23,7 +23,7 @@ const Wargames = ()=>
       <div class="absolute inset-0 opacity-0 group-hover:opacity-100"></div>
       
         
-      <img class="h-60 lg:h-72 object-cover  rounded-xl transition-all duration-500 transform translate-y-10 opacity-0 group-hover:opacity-100  group-hover:z-50 group-hover:translate-y-[-0%] " src={wargameImg1} alt="Cash Prize" />
+      <img class="h-72 lg:h-80 object-cover  rounded-xl transition-all duration-500 transform translate-y-10 opacity-0 group-hover:opacity-100  group-hover:z-50 group-hover:translate-y-[-0%] " src={wargameImg1} alt="Cash Prize" />
 
 
       <h2 class="text-black mt-10  mb-10 hover:mt-0 text-center text-3xl font-bold pb-10 transition-all duration-500 transform translate-y-0 group-hover:translate-y-[-30%] group-hover:mb-[-10px] group-hover:text-4xl group-hover:text-white">
