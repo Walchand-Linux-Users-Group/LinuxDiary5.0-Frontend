@@ -1,3 +1,4 @@
+// src/pages/Home.js
 import React from "react";
 import ButtonGradient from "../assets/svg/ButtonGradient";
 import Benefits from "../components/Benefits";
@@ -10,11 +11,13 @@ import Pricing from "../components/Pricing";
 import Roadmap from "../components/Roadmap";
 import Services from "../components/Services";
 import Prizes from "../components/Prizes";
+import SnowfallEffect from "../components/SnowfallEffect"; // Import SnowfallEffect
 
 const Home = () => {
   return (
-    <div className="gradient-background">
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+    <div className="relative gradient-background">
+      <SnowfallEffect /> {/* Add SnowfallEffect component */}
+      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden relative z-10">
         <Header />
         <MainScreen />
         {/* <Hero />
