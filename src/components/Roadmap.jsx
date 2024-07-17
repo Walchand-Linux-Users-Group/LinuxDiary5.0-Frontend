@@ -5,11 +5,11 @@ import OpenSourceImg from "../assets/roadmap/Open_Souce.png";
 
 const Roadmap = () => (
     <div id="sessions" className="py-12">
-        <h1 className="text-white font-bold text-center text-4xl lg:text-5xl m-10">
+        <h1 className="text-white font-bold text-center text-3xl lg:text-5xl m-10">
             Session Roadmap
         </h1>
 
-        <div className="grid md:grid-cols-2  gap-24  w-fit mx-auto">
+        <div className="grid md:grid-cols-2 gap-24  w-fit lg:mx-auto mx-14">
             {/* Card1 */}
             <div className="lg:flex">
                 <div className="flex-1 max-w-sm bg-cardBlue rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex items-center justify-center">
@@ -24,7 +24,7 @@ const Roadmap = () => (
                     <div className="text-2xl text-center p-5 font-bold lg:pb-2">
                         Session 1: Open Source 101
                     </div>
-                    <div className="text-center px-10 pt-0 pb-3">
+                    <div className="text-center px-5 pt-0 pb-3">
                         <p>
                             Worried about being an absolute beginner in Linux?
                             Don't fret! We've got you covered with a
@@ -51,7 +51,7 @@ const Roadmap = () => (
                     <div className="text-2xl text-center p-5 font-bold lg:pb-2">
                         Session 2: Echo Linux
                     </div>
-                    <div className="text-center px-10 pt-0 pb-3">
+                    <div className="text-center px-5 pt-0 pb-3">
                         <p>
                             With a strong foundation in place, we will dive into
                             the world of open-source and Linux, empowering you
@@ -78,7 +78,7 @@ const Roadmap = () => (
                     <div className="text-2xl text-center p-5 font-bold lg:pb-2">
                         Session 3: The File Maze
                     </div>
-                    <div className="text-center px-10 pt-0 pb-3">
+                    <div className="text-center px-5 pt-0 pb-3">
                         <p>
                             Guess what? Everything in Linux is a file! Here
                             we'll explore the file system in Linux. In this
@@ -104,7 +104,7 @@ const Roadmap = () => (
                     <div className="text-2xl text-center p-5 font-bold lg:pb-2">
                         Session 4: NetVerse
                     </div>
-                    <div className="text-center px-10 pt-0 pb-3">
+                    <div className="text-center px-5 pt-0 pb-3">
                         <p>
                             Seeking knowledge and excitement? Join our
                             captivating journey through the intricate worlds of
