@@ -40,17 +40,17 @@ export const navigation = [
   {
     id: "0",
     title: "Home",
-    url: "#features",
+    url: "#home",
   },
   {
     id: "1",
     title: "Session Roadmap",
-    url: "#pricing",
+    url: "#sessions",
   },
   {
     id: "2",
     title: "Register",
-    url: "#how-to-use",
+    url: "#register",
   },
   {
     id: "3",
