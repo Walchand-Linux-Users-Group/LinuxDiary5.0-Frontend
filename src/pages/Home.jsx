@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div className="relative gradient-background">
       <SnowfallEffect /> {/* Add SnowfallEffect component */}
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden relative z-10">
+      <div className="pt-[4rem] lg:pt-[5rem] overflow-x-hidden relative z-10 space-y-12">
         <Header />
         <MainScreen />
         <Roadmap />
