@@ -12,6 +12,7 @@ import Roadmap from "../components/Roadmap";
 import Services from "../components/Services";
 import Prizes from "../components/Prizes";
 import SnowfallEffect from "../components/SnowfallEffect"; // Import SnowfallEffect
+import Wargames from "../components/Wargames";
 
 const Home = () => {
   return (
@@ -20,11 +21,8 @@ const Home = () => {
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden relative z-10">
         <Header />
         <MainScreen />
-        {/* <Hero />
-        <Benefits /> */}
         <Roadmap />
-        <Collaboration />
-        <Services />
+        <Wargames/>
         <Prizes />
         <Footer />
       </div>

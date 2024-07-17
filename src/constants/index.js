@@ -49,13 +49,13 @@ export const navigation = [
   },
   {
     id: "2",
-    title: "Register",
-    url: "#register",
+    title: "More",
+    url: "#more",
   },
   {
     id: "3",
-    title: "More about Us",
-    url: "https://www.wcewlug.org/",
+    title: "About us",
+    url: "#about  ",
   },
 ];
 

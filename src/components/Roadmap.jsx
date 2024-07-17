@@ -20,7 +20,7 @@ const Roadmap = () => (
                         alt="Open Source 101"
                     ></img>
                 </div>
-                <div className="flex-2 max-w-sm bg-gray-400 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
+                <div className="flex-2 max-w-sm bg-gray-500 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
                     <div className="text-2xl text-center p-5 font-bold lg:pb-2">
                         Session 1: Open Source 101
                     </div>
@@ -47,7 +47,7 @@ const Roadmap = () => (
                         alt="Echo Linux"
                     ></img>
                 </div>
-                <div className="flex-2 max-w-sm bg-gray-400 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
+                <div className="flex-2 max-w-sm bg-gray-500 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
                     <div className="text-2xl text-center p-5 font-bold lg:pb-2">
                         Session 2: Echo Linux
                     </div>
@@ -74,7 +74,7 @@ const Roadmap = () => (
                         alt="The File Maze"
                     ></img>
                 </div>
-                <div className="flex-2 max-w-sm bg-gray-400 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
+                <div className="flex-2 max-w-sm bg-gray-500 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
                     <div className="text-2xl text-center p-5 font-bold lg:pb-2">
                         Session 3: The File Maze
                     </div>
@@ -100,7 +100,7 @@ const Roadmap = () => (
                         alt="NetVerse"
                     ></img>
                 </div>
-                <div className="flex-2 max-w-sm bg-gray-400 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
+                <div className="flex-2 max-w-sm bg-gray-500 rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex flex-col justify-center">
                     <div className="text-2xl text-center p-5 font-bold lg:pb-2">
                         Session 4: NetVerse
                     </div>
