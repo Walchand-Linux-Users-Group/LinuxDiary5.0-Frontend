@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Routes ,Route} from 'react-router-dom'
 import Home from './pages/Home'
@@ -10,7 +11,7 @@ const App = () => {
         <Route path="/register" element={<Register/>} />
       </Routes>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
