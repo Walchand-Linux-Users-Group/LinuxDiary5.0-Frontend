@@ -18,11 +18,7 @@ const Home = () => {
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header />
         <MainScreen />
-        {/* <Hero />
-        <Benefits /> */}
         <Roadmap />
-        <Collaboration />
-        <Services />
         <Wargames/>
         <Prizes />
         <Footer />
