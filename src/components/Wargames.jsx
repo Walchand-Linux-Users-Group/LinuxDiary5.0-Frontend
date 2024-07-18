@@ -6,8 +6,8 @@ import cashPrizeImg from "../assets/Prizes/cashPrize.webp";
 
 const Wargames = () => {
     return (
-        <div id="more">
-            <h1 className="text-black font-bold text-center text-3xl lg:text-5xl mx-10 mb-10">
+        <div >
+            <h1 className="text-black font-bold text-center text-3xl lg:text-5xl lg:mx-10 mb-10">
                 Wargames
             </h1>
 
@@ -30,9 +30,13 @@ const Wargames = () => {
                             alt="Cash Prize"
                         />
 
-                        <h2 class="text-black mt-10  mb-10 hover:mt-0 text-center text-3xl font-bold pb-10 transition-all duration-500 transform translate-y-0 group-hover:translate-y-[-30%] group-hover:mb-[-10px] group-hover:text-4xl group-hover:text-white">
+                        <h2 class="text-white mt-10  mb-10 hover:mt-0 text-center text-3xl font-bold pb-0 group-hover:hidden transition-all duration-500 transform translate-y-0  group-hover:translate-y-[-30%] group-hover:mb-[-10px]   group-hover:text-4xl group-hover:text-white">
                             Wargames
                         </h2>
+
+                        <h5 class="text-white  opacity-0 hover:mt-0 text-center text-sm lg:text-2xl font-bold   group-hover:opacity-100 transition-transform duration-500 transform translate-y-0  group-hover:translate-y-[-30%] group-hover:mb-[-10px]  group-hover:text-blue">
+                        Play thrilling Wargames at the end to test the knowledge and win 
+                        </h5>
                     </div>
                 </div>
             </div>
