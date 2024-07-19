@@ -4,12 +4,12 @@ import PenguinImg from "../assets/roadmap/penguin_gift.webp";
 import OpenSourceImg from "../assets/roadmap/Open_Souce.png";
 
 const Roadmap = () => (
-    <div id="sessions" className="lg:pt-40 py-12">
+    <div id="sessions" className="lg:pt-40 px-6 py-12 w-full">
         <h1 className="text-black font-bold text-center text-3xl lg:text-5xl m-10">
             Session Roadmap
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-24  w-fit lg:mx-auto mx-14">
+        <div className="grid md:grid-cols-2 gap-24  w-fit mx-auto ">
             {/* Card1 */}
             <div className="lg:flex">
                 <div className="flex-1 max-w-sm bg-cardBlue rounded-2xl overflow-hidden md:max-w-lg lg:max-w-xs flex items-center justify-center">

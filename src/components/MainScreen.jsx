@@ -16,7 +16,7 @@ const MainScreen = () => {
         </h1>
       </div>
       <div className="md:w-3/4">
-        <img src={chillingPengs} className="h-72 lg:h-auto" alt="Loading penguins..." />
+        <img src={chillingPengs} className="h-72 lg:h-auto mx-auto" alt="Loading penguins..." />
       </div>
     </div>
   );

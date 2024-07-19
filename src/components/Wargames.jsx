@@ -6,7 +6,7 @@ import cashPrizeImg from "../assets/Prizes/cashPrize.webp";
 
 const Wargames = () => {
     return (
-        <div >
+        <div id="more">
             <h1 className="text-black font-bold text-center text-3xl lg:text-5xl lg:mx-10 mb-10">
                 Wargames
             </h1>
