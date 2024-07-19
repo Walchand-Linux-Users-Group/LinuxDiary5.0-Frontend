@@ -55,7 +55,7 @@ const Header = () => {
                 key={item.id}
                 href={item.url}
                 onClick={handleClick}
-                className={`block relative font-code text-xl lg:text-sm uppercase text-white lg:text-white transition-colors hover:text-color-1 ${
+                className={`block relative font-code text-xl lg:text-sm uppercase text-white lg:text-blue-900 transition-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
                 } px-6 py-6 md:py-8 lg:-mr-0.25 text-base lg:font-semibold ${
                   item.url === location.hash
