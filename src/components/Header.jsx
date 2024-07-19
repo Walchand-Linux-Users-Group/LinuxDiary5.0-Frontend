@@ -35,7 +35,7 @@ const Header = () => {
             }`}
         >
             <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-2">
-                <a className="block w-[12rem] xl:mr-8 p-2" href="">
+                <a className="block w-[12rem] xl:mr-8 p-3" href="">
                     <img src={WlugLogo} className="w-32"></img>
                 </a>
 
@@ -44,7 +44,7 @@ const Header = () => {
                         openNavigation ? "flex" : "hidden"
                     } fixed top-[5.7rem] left-0 right-0 bottom-0 bg-white bg-opacity-40 lg:static lg:flex lg:ml-auto lg:bg-transparent`}
                 >
-                    <div className="relative z-2 flex flex-col items-center space-y-14 lg:space-y-0 justify-center m-auto lg:flex-row lg:space-x-12 lg:px-12 text-xl lg:text-lg uppercase font-code font-semibold">
+                    <div className="relative z-2 flex flex-col items-center space-y-14 lg:space-y-0 justify-center m-auto lg:flex-row lg:space-x-12 lg:px-12 text-xl lg:text-lg uppercase font-code ">
                         {navigation.map((item) => (
                             <a
                                 key={item.id}
