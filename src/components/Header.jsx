@@ -30,8 +30,8 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 border-b border-white lg:bg-white/100 lg:backdrop-blur-sm ${
-        openNavigation ? "bg-white" : "bg-white/90 backdrop-blur-sm"
+      className={`fixed top-0 left-0 w-full z-50 border-b border-white lg:bg-white/70 lg:backdrop-blur-sm ${
+        openNavigation ? "bg-white/70" : "bg-white/70 backdrop-blur-sm"
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 h-16 max-lg:py-2">
