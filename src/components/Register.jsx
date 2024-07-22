@@ -122,7 +122,7 @@ const Register = () => {
         formData.append("paymentImg", file);
         try{
             const res = await fetch(
-                "https://linuxdiary5-0-backend.onrender.com/user/registration",
+                "https://linuxdiary5-0-backend-cjli.onrender.com/user/registration",
                 {
                     method: "POST",
                     body: formData,
