@@ -15,24 +15,25 @@ import SnowfallEffect from "../components/SnowfallEffect"; // Import SnowfallEff
 import Wargames from "../components/Wargames";
 import Session from "../components/Session/Session";
 import CardCollection from "../components/CardCollection/CardCollection";
+import Register from "../components/Register";
+import Flipbook from "../components/Flipbook";
 
 const Home = () => {
-  return (
-    <div className="relative gradient-background">
-      <SnowfallEffect /> {/* Add SnowfallEffect component */}
-      <div className="pt-[4rem] lg:pt-[5rem] overflow-x-hidden relative z-10 space-y-12">
-        <Header />
-        <MainScreen />
-        <Roadmap />
-        {/* <Session/> */}
-        <Wargames/>
-        {/* <CardCollection/> */}
-        <Prizes />
-        <Footer />
-      </div>
-      <ButtonGradient />
-    </div>
-  );
+    return (
+        <div className="relative gradient-background scroll-smooth">
+            <SnowfallEffect /> {/* Add SnowfallEffect component */}
+            <div className="pt-[2rem] overflow-x-hidden relative z-10 space-y-12">
+                <MainScreen />
+                <Roadmap />
+                <Wargames />
+                <Prizes />
+                <Register />
+                <Flipbook />
+                <Footer />
+            </div>
+            <ButtonGradient />
+        </div>
+    );
 };
 
 export default Home;

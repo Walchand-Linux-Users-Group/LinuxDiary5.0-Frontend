@@ -4,7 +4,7 @@ import PenguinImg from "../assets/roadmap/penguin_gift.webp";
 import OpenSourceImg from "../assets/roadmap/Open_Souce.png";
 
 const Roadmap = () => (
-    <div id="sessions" className="lg:pt-40 px-6 py-12 w-full">
+    <div id="sessions" className="lg:pt-40 px-6 py-20 w-full">
         <h1 className="text-black font-bold text-center text-3xl lg:text-5xl m-10">
             Session Roadmap
         </h1>
