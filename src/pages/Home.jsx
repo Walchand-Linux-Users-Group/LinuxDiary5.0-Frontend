@@ -13,6 +13,8 @@ import Services from "../components/Services";
 import Prizes from "../components/Prizes";
 import SnowfallEffect from "../components/SnowfallEffect"; // Import SnowfallEffect
 import Wargames from "../components/Wargames";
+import Session from "../components/Session/Session";
+import CardCollection from "../components/CardCollection/CardCollection";
 
 const Home = () => {
   return (
@@ -22,7 +24,9 @@ const Home = () => {
         <Header />
         <MainScreen />
         <Roadmap />
+        {/* <Session/> */}
         <Wargames/>
+        {/* <CardCollection/> */}
         <Prizes />
         <Footer />
       </div>
