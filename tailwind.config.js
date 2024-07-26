@@ -76,7 +76,7 @@ export default {
             },
             boxShadow: {
                 "custom-inset":
-                    "inset 0 0 30px 0 rgba(36, 10, 3, .5),-2px 0 5px 2px rgba(0, 0, 0, .4)",
+                    "inset 0 0 5px 0 rgba(36, 10, 3, .5),-2px 0 5px 2px rgba(0, 0, 0, .4)",
                 // 'custom-outset': '',
             },
         },

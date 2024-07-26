@@ -8,7 +8,6 @@ const App = () => {
     <div className="gradient-background">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/register" element={<Register/>} />
       </Routes>
     </div>
   );

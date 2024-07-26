@@ -4,6 +4,7 @@ import SnowfallEffect from "./SnowfallEffect";
 import RegisterTux from "../assets/registerTux.png";
 import { BiCross, BiUpload } from "react-icons/bi";
 import { RxCrossCircled } from "react-icons/rx";
+import Dropdown from "./DropDown";
 const Input = ({
     label,
     type,
@@ -60,6 +61,7 @@ const Register = () => {
     const [referral, setReferral] = useState("");
     const [file, setFile] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+    const [isDualBooted, setIsDualBooted] = useState("Do you have linux installed?");
 
     const validatePhone = (phone) => {
         const pattern = /^[5-9]\d{9}$/;
@@ -67,44 +69,48 @@ const Register = () => {
     };
 
     const isValidInput = () => {
-        if(name.length < 3 || name.length > 50){
+        if (name.length < 3 || name.length > 50) {
             alert("Name should be between 3 and 50 characters");
             return false;
         }
-        if(email.length === 0){
+        if (email.length === 0) {
             alert("Email is required");
             return false;
         }
-        if(!validatePhone(phone)){
+        if (!validatePhone(phone)) {
             alert("Invalid phone number");
             return false;
         }
-        if(college.length === 0){
+        if (college.length === 0) {
             alert("College name is required");
             return false;
         }
-        if(year.length === 0){
+        if (year.length === 0) {
             alert("Year of study is required");
             return false;
         }
-        if(branch.length === 0){
+        if (branch.length === 0) {
             alert("Branch is required");
             return false;
         }
-        if(transaction.length === 0){
+        if (transaction.length === 0) {
             alert("Transaction ID is required");
             return false;
         }
+        if (isDualBooted !== "Yes" && isDualBooted !== "No") {
+            alert("Please select if you have linux installed on your PC");
+            return false;
+        }
         return true;
-    }
+    };
     const register = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-        if(!isValidInput()){
+        if (!isValidInput()) {
             setIsLoading(false);
-            return
+            return;
         }
-        if(file === null){
+        if (file === null) {
             alert("Please upload payment screenshot");
             setIsLoading(false);
             return;
@@ -117,10 +123,10 @@ const Register = () => {
         formData.append("collegeName", college);
         formData.append("yearOfStudy", year);
         formData.append("branch", branch);
-        formData.append("isDualBooted", true);
+        formData.append("isDualBooted", isDualBooted === "Yes");
         formData.append("referralCode", referral);
         formData.append("paymentImg", file);
-        try{
+        try {
             const res = await fetch(
                 "https://linuxdiary5-0-backend-cjli.onrender.com/user/registration",
                 {
@@ -134,7 +140,7 @@ const Register = () => {
             } else {
                 alert("Failed to register");
             }
-        }catch(err){
+        } catch (err) {
             alert("Failed to register");
         }
         setIsLoading(false);
@@ -144,12 +150,7 @@ const Register = () => {
         document.title = "Register | Linux Diary";
     }, []);
     return (
-        <div className="min-h-screen p-6 md:p-14 relative flex items-center justify-center">
-            <SnowfallEffect />
-            <img
-                src={MainImg}
-                className="w-[80%] z-5 absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]"
-            ></img>
+        <div className="px-6 md:px-14 py-24 relative flex items-center justify-center">
             <div className="bg-white/30  shadow-md rounded-lg md:flex md:space-x-4 justify-center items-center z-50 w-full">
                 <div className="w-full p-6 h-full">
                     <h1 className="text-4xl font-[900]">Register!</h1>
@@ -208,6 +209,13 @@ const Register = () => {
                             id={"transaction"}
                             onChange={(e) => setTransaction(e.target.value)}
                         />
+
+                        <Dropdown
+                            selectedItem={isDualBooted}
+                            options={["Yes", "No"]}
+                            handleItemClick={(item) => setIsDualBooted(item)}
+                            label={"Do you have linux installed ?"}
+                        />
                         <Input
                             label={"Referral Code"}
                             type={"text"}
@@ -221,15 +229,13 @@ const Register = () => {
                                 type="submit"
                                 onClick={register}
                             >
-                                {
-                                    isLoading ? (
-                                        <div className="flex items-center justify-center space-x-2">
-                                            <div className="w-6 h-6 border-2 border-t-2 border-white rounded-full animate-spin"></div>
-                                        </div>
-                                    ) : (
-                                        "Register"
-                                    )
-                                }
+                                {isLoading ? (
+                                    <div className="flex items-center justify-center space-x-2">
+                                        <div className="w-6 h-6 border-2 border-t-2 border-white rounded-full animate-spin"></div>
+                                    </div>
+                                ) : (
+                                    "Register"
+                                )}
                             </button>
                         </div>
                     </form>

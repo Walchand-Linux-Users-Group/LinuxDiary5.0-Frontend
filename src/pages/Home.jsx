@@ -13,22 +13,25 @@ import Services from "../components/Services";
 import Prizes from "../components/Prizes";
 import SnowfallEffect from "../components/SnowfallEffect"; // Import SnowfallEffect
 import Wargames from "../components/Wargames";
+import Register from "../components/Register";
+import Flipbook from "../components/Flipbook";
 
 const Home = () => {
-  return (
-    <div className="relative gradient-background">
-      <SnowfallEffect /> {/* Add SnowfallEffect component */}
-      <div className="pt-[4rem] lg:pt-[5rem] overflow-x-hidden relative z-10 space-y-12">
-        <Header />
-        <MainScreen />
-        <Roadmap />
-        <Wargames/>
-        <Prizes />
-        <Footer />
-      </div>
-      <ButtonGradient />
-    </div>
-  );
+    return (
+        <div className="relative gradient-background">
+            <SnowfallEffect /> 
+            <div className="pt-[2rem] overflow-x-hidden relative z-10 space-y-12">
+                <MainScreen />
+                <Roadmap />
+                <Wargames />
+                <Prizes />
+                <Register />
+                <Flipbook />
+                <Footer />
+            </div>
+            <ButtonGradient />
+        </div>
+    );
 };
 
 export default Home;

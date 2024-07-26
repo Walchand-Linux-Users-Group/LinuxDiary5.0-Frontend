@@ -1,10 +1,8 @@
 import React from "react";
-import Section from "./Section";
 import FooterImg from "../assets/footer2.png";
-import WlugImg from "../assets/wlug.png";
-import { BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
-import { LiaLinkedin } from "react-icons/lia";
-import { navigation } from "../constants";
+import WlugImg from "../assets/wlug.png";   
+import { navigation } from "../constants";;
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
@@ -15,16 +13,20 @@ const Footer = () => {
                     <h1 className="text-3xl font-extrabold text-gray-800 mb-2">
                         Stay Tuned!
                     </h1>
-                    <div className="flex space-x-2 justify-center">
-                        <BsInstagram className="text-3xl text-gray-800 cursor-pointer" />
-                        <LiaLinkedin className="text-3xl text-gray-800 cursor-pointer" />
-                        <BsGithub className="text-3xl text-gray-800 cursor-pointer" />
-                        <BsTwitter className="text-3xl text-gray-800 cursor-pointer" />
+                    <div className="flex space-x-3 justify-center">
+                        <FaInstagram className="text-3xl text-gray-800 cursor-pointer" />
+                        <FaLinkedin className="text-3xl text-gray-800 cursor-pointer" />
+                        <FaGithub className="text-3xl text-gray-800 cursor-pointer" />
+                        <FaXTwitter className="text-3xl text-gray-800 cursor-pointer" />
                     </div>
                 </div>
                 <div className="flex flex-col space-y-1 text-center md:text-left">
                     {navigation.map((nav, index) => (
-                        <a href={nav.url} key={nav.id} className="hover:scale-105 hover:text-blue-400 transition-all">
+                        <a
+                            href={nav.url}
+                            key={nav.id}
+                            className="hover:scale-105 hover:text-blue-400 transition-all"
+                        >
                             {nav.title}
                         </a>
                     ))}

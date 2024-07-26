@@ -17,7 +17,7 @@ const Flipbook = () => {
         };
     }, []);
     return (
-        <div className="h-screen w-screen flex items-center justify-center overflow-hidden p-4 ">
+        <div className=" w-screen flex items-center justify-center overflow-hidden p-16 ">
             <HTMLFlipBook
                 width={width}
                 height={600}
@@ -32,14 +32,15 @@ const Flipbook = () => {
                 onFlip={(e) => {
                     console.log("flipped", e);
                 }}
+                startPage={1}
             >
                 {/* Cover Page */}
-                <div className="bg-gradient-to-br from-blue-500 to-blue-200 rounded-lg  shadow-custom-inset  ">
-                    <div className="bg-gradient-to-br from-blue-600 to-blue-300 rounded-lg shadow-xl p-12 w-full max-w-lg text-center h-full  flex flex-col justify-center items-center space-y-6">
+                <div className="bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg  shadow-custom-inset  ">
+                    <div className="bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg shadow-md p-12 w-full max-w-lg text-center h-full  flex flex-col justify-center items-center space-y-6">
                         <h1 className="text-5xl font-extrabold text-white">
                             Old Memories
                         </h1>
-                        <p className="mt-4 text-xl text-blue-200 italic">
+                        <p className="mt-4 text-xl text-white italic">
                             A journey through cherished moments
                         </p>
 
@@ -60,7 +61,7 @@ const Flipbook = () => {
                 </div>
                 {/* ******************* */}
                 {/* ******************************************************** */}
-                <div className=" bg-gradient-to-br from-blue-500 to-blue-200 rounded-lg  h-full w-full shadow-custom-inset">
+                <div className=" bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg  h-full w-full shadow-custom-inset">
                     <div className="w-full h-full flex flex-col justify-center items-center space-y-12 z-10">
                         <div className="w-3/4 bg-blue-100 z-10 shadow-md p-4 rounded-md pb-8">
                             <img
@@ -80,7 +81,7 @@ const Flipbook = () => {
                 </div>
                 {/* **************************************************** */}
                 {/* ******************************************************** */}
-                <div className=" bg-gradient-to-br from-blue-500 to-blue-200 rounded-lg  h-full w-full shadow-custom-inset">
+                <div className=" bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg  h-full w-full shadow-custom-inset">
                     <div className="w-full h-full flex flex-col justify-center items-center space-y-12 z-10">
                         <div className="w-3/4 bg-blue-100 z-10 shadow-md p-4 rounded-md pb-8">
                             <img
@@ -100,7 +101,7 @@ const Flipbook = () => {
                 </div>
                 {/* **************************************************** */}
                 {/* ******************************************************** */}
-                <div className=" bg-gradient-to-br from-blue-500 to-blue-200 rounded-lg  h-full w-full shadow-custom-inset">
+                <div className=" bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg  h-full w-full shadow-custom-inset">
                     <div className="w-full h-full flex flex-col justify-center items-center space-y-12 z-10">
                         <div className="w-3/4 bg-blue-100 z-10 shadow-md p-4 rounded-md pb-8">
                             <img
@@ -120,7 +121,7 @@ const Flipbook = () => {
                 </div>
                 {/* **************************************************** */}
                 {/* ******************************************************** */}
-                <div className=" bg-gradient-to-br from-blue-500 to-blue-200 rounded-lg  h-full w-full shadow-custom-inset">
+                <div className=" bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg  h-full w-full shadow-custom-inset">
                     <div className="w-full h-full flex flex-col justify-center items-center space-y-12 z-10">
                         <div className="w-3/4 bg-blue-100 z-10 shadow-md p-4 rounded-md pb-8">
                             <img
@@ -140,7 +141,7 @@ const Flipbook = () => {
                 </div>
                 {/* **************************************************** */}
                 {/* ******************************************************** */}
-                <div className=" bg-gradient-to-br from-blue-500 to-blue-200 rounded-lg  h-full w-full shadow-custom-inset">
+                <div className=" bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg  h-full w-full shadow-custom-inset">
                     <div className="w-full h-full flex flex-col justify-center items-center space-y-12 z-10">
                         <div className="w-3/4 bg-blue-100 z-10 shadow-md p-4 rounded-md pb-8">
                             <img
@@ -160,7 +161,7 @@ const Flipbook = () => {
                 </div>
                 {/* **************************************************** */}
                 {/* ******************************************************** */}
-                <div className=" bg-gradient-to-br from-blue-500 to-blue-200 rounded-lg  h-full w-full shadow-custom-inset">
+                <div className=" bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg  h-full w-full shadow-custom-inset">
                     <div className="w-full h-full flex flex-col justify-center items-center space-y-12 z-10">
                         <div className="w-3/4 bg-blue-100 z-10 shadow-md p-4 rounded-md pb-8">
                             <img
@@ -180,7 +181,7 @@ const Flipbook = () => {
                 </div>
                 {/* **************************************************** */}
                 {/* ******************************************************** */}
-                <div className=" bg-gradient-to-br from-blue-500 to-blue-200 rounded-lg  h-full w-full shadow-custom-inset">
+                <div className=" bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg  h-full w-full shadow-custom-inset">
                     <div className="w-full h-full flex flex-col justify-center items-center space-y-12 z-10">
                         <div className="w-3/4 bg-blue-100 z-10 shadow-md p-4 rounded-md pb-8">
                             <img
@@ -200,7 +201,7 @@ const Flipbook = () => {
                 </div>
                 {/* **************************************************** */}
                 {/* ******************************************************** */}
-                <div className=" bg-gradient-to-br from-blue-500 to-blue-200 rounded-lg  h-full w-full shadow-custom-inset">
+                <div className=" bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg  h-full w-full shadow-custom-inset">
                     <div className="w-full h-full flex flex-col justify-center items-center space-y-12 z-10">
                         <div className="w-3/4 bg-blue-100 z-10 shadow-md p-4 rounded-md pb-8">
                             <img
@@ -220,7 +221,7 @@ const Flipbook = () => {
                 </div>
                 {/* **************************************************** */}
                 {/* ******************************************************** */}
-                <div className=" bg-gradient-to-br from-blue-500 to-blue-200 rounded-lg  h-full w-full shadow-custom-inset">
+                <div className=" bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg  h-full w-full shadow-custom-inset">
                     <div className="w-full h-full flex flex-col justify-center items-center space-y-12 z-10">
                         <div className="w-3/4 bg-blue-100 z-10 shadow-md p-4 rounded-md pb-8">
                             <img
@@ -240,7 +241,7 @@ const Flipbook = () => {
                 </div>
                 {/* **************************************************** */}
                 {/* ******************************************************** */}
-                <div className=" bg-gradient-to-br from-blue-500 to-blue-200 rounded-lg  h-full w-full shadow-custom-inset">
+                <div className=" bg-gradient-to-br from-blue-200 to-blue-100 rounded-lg  h-full w-full shadow-custom-inset">
                     <div className="w-full h-full flex flex-col justify-center items-center space-y-12 z-10">
                         <div className="w-3/4 bg-blue-100 z-10 shadow-md p-4 rounded-md pb-8">
                             <img
