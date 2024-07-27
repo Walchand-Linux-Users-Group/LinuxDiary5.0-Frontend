@@ -14,6 +14,7 @@ const Input = ({
     minLength,
     maxLength,
     id,
+    pattern
 }) => {
     const [isFocused, setIsFocused] = useState(false);
 
@@ -176,8 +177,10 @@ const Register = () => {
                         />
                         <Input
                             label={"Phone No."}
-                            type={"number"}
+                            type={"tel"}
+                            pattern={"[5-9]{1}[0-9]{9}"}
                             required={true}
+                            maxLength={10}
                             id={"phone"}
                             onChange={(e) => setPhone(e.target.value)}
                         />
