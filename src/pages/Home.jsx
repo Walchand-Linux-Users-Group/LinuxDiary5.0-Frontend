@@ -28,11 +28,11 @@ const Home = () => {
         <Session />
         {/* <Wargames /> */}
         <CardCollection />
+        <Collaboration />
         <Prizes />
         <Register />
         <Flipbook />
         <Footer />
-        <Collaboration/>
       </div>
       <ButtonGradient />
     </div>
