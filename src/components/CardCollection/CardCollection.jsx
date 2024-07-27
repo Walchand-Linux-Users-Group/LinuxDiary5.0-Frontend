@@ -1,5 +1,8 @@
 // import React from 'react';
-import styles from "./cardc.module.css"; // Assuming you're using CSS modules
+import styles from "./cardc.module.css";
+import WarGameImg1 from "../../assets/wargames/Wargame1.png";
+import WarGameImg2 from "../../assets/wargames/output-onlinepngtools-removebg-preview.png";
+import WarGameImg3 from "../../assets/wargames/wargame2.webp";
 
 const Card = ({ coverImage, titleImage, characterImage }) => (
     <div className={styles.cardContainer}>
@@ -17,7 +20,7 @@ const Card = ({ coverImage, titleImage, characterImage }) => (
                 />
             </div>
             <img src={titleImage} className={styles.title} alt="Title" />
-            
+
             <img
                 src={characterImage}
                 className={styles.character}
@@ -30,9 +33,9 @@ const Card = ({ coverImage, titleImage, characterImage }) => (
 const CardCollection = () => (
     <>
         <Card
-            coverImage="/src/assets/wargames/Wargame1.png"
-            titleImage="/src/assets/wargames/output-onlinepngtools-removebg-preview.png"
-            characterImage="/src/assets/wargames/wargame2.webp"
+            coverImage={WarGameImg1}
+            titleImage={WarGameImg2}
+            characterImage={WarGameImg3}
         />
     </>
 );
