@@ -149,10 +149,10 @@
 
 @media screen and (max-width: 480px) {
   .cardContainer {
-    --card-width: 90vw;
+    --card-width: 40vw;
   }
 
   .card {
-    padding: 0 10px;
+    padding: 0 5px;
   }
 }
