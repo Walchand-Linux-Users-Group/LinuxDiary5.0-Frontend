@@ -19,8 +19,6 @@ const Card = ({ coverImage, titleImage, characterImage }) => (
                     alt="Cover"
                 />
             </div>
-            <img src={titleImage} className={styles.title} alt="Title" />
-
             <img
                 src={characterImage}
                 className={styles.character}
@@ -31,13 +29,16 @@ const Card = ({ coverImage, titleImage, characterImage }) => (
 );
 
 const CardCollection = () => (
-    <>
+    <div>
+        <h1 className="text-white font-bold text-center text-3xl lg:text-5xl lg:mx-10 mb-8">
+            Wargames
+        </h1>
         <Card
             coverImage={WarGameImg1}
             titleImage={WarGameImg2}
             characterImage={WarGameImg3}
         />
-    </>
+    </div>
 );
 
 export default CardCollection;

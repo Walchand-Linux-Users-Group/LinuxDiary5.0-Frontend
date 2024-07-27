@@ -9,7 +9,7 @@ const Session = () => {
     return (
         <>
             <div className="title-sess">
-                <h1 className="text-black font-bold text-center text-3xl lg:text-5xl">
+                <h1 className="text-white font-bold text-center text-3xl lg:text-5xl">
                     Roadmap
                 </h1>
             </div>

@@ -1,5 +1,5 @@
 .cardContainer {
-  --card-width: 30vw;
+  --card-width: 20vw;
   --card-height: calc(var(--card-width));
   display: flex;
   justify-content: center;
@@ -149,7 +149,7 @@
 
 @media screen and (max-width: 480px) {
   .cardContainer {
-    --card-width: 40vw;
+    --card-width: 70vw;
   }
 
   .card {
