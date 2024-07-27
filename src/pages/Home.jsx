@@ -32,7 +32,7 @@ const Home = () => {
         <Register />
         <Flipbook />
         <Footer />
-        {/* <Collaboration/> */}
+        <Collaboration/>
       </div>
       <ButtonGradient />
     </div>

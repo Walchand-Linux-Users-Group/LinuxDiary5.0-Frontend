@@ -1,3 +1,4 @@
+import React from "react";
 import { brainwaveSymbol, check } from "../assets";
 import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./Button";
@@ -6,7 +7,7 @@ import { LeftCurve, RightCurve } from "./design/Collaboration";
 
 const Collaboration = () => {
   return (
-    <Section crosses className=" bg-transparent">
+    <Section crosses className="bg-transparent">
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
@@ -49,7 +50,7 @@ const Collaboration = () => {
               </div>
             </div>
 
-            <ul>
+            <ul className="absolute inset-0 animate-spin-slow">
               {collabApps.map((app, index) => (
                 <li
                   key={app.id}
