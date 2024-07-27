@@ -42,16 +42,19 @@
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
-  display: flex;
+  display: flex;  
   flex-direction: column;
   padding: 1.5rem;
   border-radius: 1rem;
   overflow: hidden;
+  /* backdrop-filter: blur(200px); */
 }
 
 .card-back {
   transform: rotateY(180deg);
-  background-color: #1e86af;
+  background: linear-gradient(to bottom, rgba(71, 194, 215,0.4), rgba(39, 158, 178,0.4));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .card-image {
@@ -82,10 +85,31 @@
 }
 
 /* Color Schemes */
-.card-front--city { background-image: linear-gradient(to bottom, #2dd135, #2d974e); }
-.card-front--ski { background-image: linear-gradient(to bottom, #47c2d7, #279eb2); }
-.card-front--beach { background-image: linear-gradient(to bottom, #fb9b88, #f86647); }
-.card-front--camping { background-image: linear-gradient(to bottom, #00db93, #00b97d); }
+.card-front--city {
+  background: linear-gradient(to bottom, rgba(71, 194, 215,0.4), rgba(39, 158, 178,0.4));
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.card-front--ski {
+  background: linear-gradient(to bottom, rgba(71, 194, 215,0.4), rgba(39, 158, 178,0.4));
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-front--beach {
+  background: linear-gradient(to bottom, rgba(71, 194, 215,0.4), rgba(39, 158, 178,0.4));
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-front--camping {
+  background: linear-gradient(to bottom, rgba(71, 194, 215,0.4), rgba(39, 158, 178,0.4));
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
