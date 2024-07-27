@@ -1,10 +1,9 @@
 // import React from 'react';
 import styles from "./cardc.module.css"; // Assuming you're using CSS modules
 
-const Card = ({ href, coverImage, titleImage, characterImage }) => (
+const Card = ({ coverImage, titleImage, characterImage }) => (
     <div className={styles.cardContainer}>
         <a
-            href={href}
             alt="Mythrill"
             target="_blank"
             rel="noopener noreferrer"
@@ -18,6 +17,7 @@ const Card = ({ href, coverImage, titleImage, characterImage }) => (
                 />
             </div>
             <img src={titleImage} className={styles.title} alt="Title" />
+            
             <img
                 src={characterImage}
                 className={styles.character}
@@ -30,9 +30,8 @@ const Card = ({ href, coverImage, titleImage, characterImage }) => (
 const CardCollection = () => (
     <>
         <Card
-            href="https://www.mythrillfiction.com/the-dark-rider"
             coverImage="/src/assets/wargames/Wargame1.png"
-            titleImage="https://example.com/dark_rider-title.png"
+            titleImage="/src/assets/wargames/output-onlinepngtools-removebg-preview.png"
             characterImage="/src/assets/wargames/wargame2.webp"
         />
     </>

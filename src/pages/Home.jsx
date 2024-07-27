@@ -19,21 +19,24 @@ import Register from "../components/Register";
 import Flipbook from "../components/Flipbook";
 
 const Home = () => {
-    return (
-        <div className="relative gradient-background scroll-smooth">
-            <SnowfallEffect /> {/* Add SnowfallEffect component */}
-            <div className="pt-[2rem] overflow-x-hidden relative z-10 space-y-12">
-                <MainScreen />
-                <Roadmap />
-                <Wargames />
-                <Prizes />
-                <Register />
-                <Flipbook />
-                <Footer />
-            </div>
-            <ButtonGradient />
-        </div>
-    );
+  return (
+    <div className="relative gradient-background scroll-smooth">
+      <SnowfallEffect /> {/* Add SnowfallEffect component */}
+      <div className="pt-[2rem] overflow-x-hidden relative z-10 space-y-12">
+        <MainScreen />
+        {/* <Roadmap /> */}
+        <Session />
+        {/* <Wargames /> */}
+        <CardCollection />
+        <Prizes />
+        <Register />
+        <Flipbook />
+        <Footer />
+        {/* <Collaboration/> */}
+      </div>
+      <ButtonGradient />
+    </div>
+  );
 };
 
 export default Home;

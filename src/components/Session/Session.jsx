@@ -39,35 +39,23 @@ const Session = () => {
 const TravelCard = ({ type, title, description, text, imageSrc }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   return (
-    <div className="card-section">
+    <div className="card-section" onClick={handleFlip}>
       <div className={`card ${isFlipped ? "flipped" : ""}`}>
         <div className={`card-front card-front--${type}`}>
           <img src={imageSrc} alt={title} className="card-image" />
-
           <div className="card-content">
-            <div className="card-oms">
-              <h2 className="card-front__heading">{title}</h2>
-
-              <button
-                className="card-button"
-                onClick={() => setIsFlipped(true)}
-              >
-                View more
-              </button>
-            </div>
+            <h2 className="card-front__heading">{title}</h2>
           </div>
         </div>
         <div className="card-back">
-          {/* <img src={imageSrc} alt={title} className="card-image" /> */}
           <div className="card-content">
-            <div>
-              <h3 className="card-front__heading">{description}</h3>
-              <p className="card-text">{text}</p>
-            </div>
-            <button className="card-button" onClick={() => setIsFlipped(false)}>
-              Back
-            </button>
+            <h3 className="card-front__heading">{description}</h3>
+            <p className="card-text">{text}</p>
           </div>
         </div>
       </div>

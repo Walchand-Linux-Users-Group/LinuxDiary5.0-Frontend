@@ -3,7 +3,8 @@
   --card-height: calc(var(--card-width));
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  display: relative;
 }
 
 .card {
@@ -12,10 +13,12 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   padding: 0 36px;
   perspective: 2500px;
   margin: 0 50px;
+  border-radius: 20px; /* Adjust this value to control the roundness */
+  /* overflow: hidden; */
   /* border-bottom: 2px solid #000; Add a visible border  */
   transition: border-bottom 0.3s ease; /* Smooth transition for border */
 }
@@ -25,16 +28,18 @@
 }
 
 .coverImage {
+  bottom: 100px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px;
   transition: opacity 0.5s ease; /* Smooth transition for opacity */
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to top,
     transparent 30%,
     rgba(12, 13, 19, 0.5) 68%,
     rgba(12, 13, 19) 97%
-  );
+  ); */
 }
 
 .card:hover .coverImage {
@@ -43,14 +48,19 @@
 
 .wrapper {
   transition: all 0.5s;
+  padding: 3rem;
+  border: 2px rgb(218, 218, 218) solid;
   position: absolute;
   width: 100%;
+  border-radius: 20px;
+
   z-index: -1;
 }
 
 .card:hover .wrapper {
   transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
   box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
 }
 
 .wrapper::before,
@@ -60,6 +70,7 @@
   width: 100%;
   height: 80px;
   transition: all 0.5s;
+  border-radius: 20px;
   position: absolute;
   left: 0;
 }
@@ -67,23 +78,23 @@
 .wrapper::before {
   top: 0;
   height: 100%;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to top,
     transparent 46%,
     rgba(12, 13, 19, 0.5) 68%,
     rgba(12, 13, 19) 97%
-  );
+  ); */
 }
 
 .wrapper::after {
   bottom: 0;
   opacity: 1;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom,
     transparent 30%,
     rgba(12, 13, 19, 0.5) 68%,
     rgba(12, 13, 19) 97%
-  );
+  ); */
 }
 
 .card:hover .wrapper::before,
@@ -97,6 +108,7 @@
 
 .title {
   width: 100%;
+  align-self: flex-end;
   transition: transform 0.5s;
 }
 
@@ -109,6 +121,7 @@
   opacity: 0;
   transition: all 0.5s;
   position: absolute;
+  border-radius: 20px;
   z-index: -1;
 }
 
@@ -120,15 +133,15 @@
 /* Responsive adjustments */
 @media screen and (max-width: 1200px) {
   .cardContainer {
-    --card-width: 70vw;
+    --card-width: 40vw;
   }
 }
 
 @media screen and (max-width: 768px) {
   .cardContainer {
-    --card-width: 80vw;
+    --card-width: 50vw;
   }
-  
+
   .card {
     padding: 0 20px;
   }
@@ -138,7 +151,7 @@
   .cardContainer {
     --card-width: 90vw;
   }
-  
+
   .card {
     padding: 0 10px;
   }
