@@ -62,7 +62,7 @@ const MainScreen = () => {
             <div className="pt-28 lg:pt-40 text-center">
                 <h1
                     ref={headingRef}
-                    className="font-bold text-6xl mb-10 lg:mb-0 lg:text-8xl lg:leading-[6rem] lg:font-extrabold"
+                    className="font-bold text-6xl mb-10 lg:mb-0 lg:text-8xl lg:leading-[6rem] lg:font-extrabold px-1"
                     style={{
                         fontFamily: "Poppins, sans-serif",
                     }}

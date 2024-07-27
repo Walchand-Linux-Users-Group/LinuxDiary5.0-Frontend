@@ -4,7 +4,7 @@ import cashPrizeImg from "../assets/Prizes/cashPrize.webp";
 
 const Prizes = () => {
     return (
-        <div className="pb-20">
+        <div className="py-20">
             <h1 className="text-white font-bold text-center text-3xl lg:text-5xl mt-20">
                 Participate and win
             </h1>

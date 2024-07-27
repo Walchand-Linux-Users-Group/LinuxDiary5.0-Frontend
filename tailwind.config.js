@@ -72,11 +72,11 @@ export default {
                 "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
                 "conic-gradient":
                     "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
-                "link": "linear-gradient(to right,#0b81d6,#0b81d6 50%,#000 50%)",
+                link: "linear-gradient(to right,#0b81d6,#0b81d6 50%,#000 50%)",
             },
             boxShadow: {
                 "custom-inset":
-                    "inset 0 0 5px 0 rgba(36, 10, 3, .5),-2px 0 5px 2px rgba(0, 0, 0, .4)",
+                    "0 0 10px rgba(0,0,0,0.3), 0 0 300px 25px rgba(222,198,122,0.7) inset",
                 // 'custom-outset': '',
             },
         },

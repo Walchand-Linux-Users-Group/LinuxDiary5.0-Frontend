@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./session.css";
 import OpenSourceiImg from "../../assets/roadmap/Open_Souce.png";
 import PenguinGiftImg from "../../assets/roadmap/penguin_gift.webp";
@@ -7,7 +7,7 @@ import NetworkImg from "../../assets/roadmap/network.png";
 
 const Session = () => {
     return (
-        <>
+        <div className="py-20">
             <div className="title-sess">
                 <h1 className="text-white font-bold text-center text-3xl lg:text-5xl">
                     Roadmap
@@ -43,19 +43,34 @@ const Session = () => {
                     imageSrc={NetworkImg}
                 />
             </div>
-        </>
+        </div>
     );
 };
 
 const TravelCard = ({ type, title, description, text, imageSrc }) => {
     const [isFlipped, setIsFlipped] = useState(false);
+    const curCard = useRef(null);
 
     const handleFlip = () => {
         setIsFlipped(!isFlipped);
     };
 
+    useEffect(() => {
+        document.addEventListener("scroll", (e) => {
+            if (curCard.current) {
+                const top = curCard.current.getBoundingClientRect().top;
+                const bottom = curCard.current.getBoundingClientRect().bottom;
+                if (top < window.innerHeight - 200 && bottom > 200 ) {
+                    setIsFlipped(true);
+                } else {
+                    setIsFlipped(false);
+                }
+            }
+        });
+    }, []);
     return (
         <div
+            ref={curCard}
             className="card-section"
             onMouseEnter={handleFlip}
             onMouseLeave={handleFlip}

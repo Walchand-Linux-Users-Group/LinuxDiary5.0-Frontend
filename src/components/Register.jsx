@@ -151,7 +151,7 @@ const Register = () => {
         document.title = "Register | Linux Diary";
     }, []);
     return (
-        <div className="px-6 md:px-14 py-24 relative flex items-center justify-center">
+        <div id="register" className="px-6 md:px-14 py-24 relative flex items-center justify-center">
             <div className="bg-white/30  shadow-md rounded-lg md:flex md:space-x-4 justify-center items-center z-50 w-full">
                 <div className="w-full p-6 h-full">
                     <h1 className="text-4xl font-[900]">Register!</h1>
