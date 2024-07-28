@@ -14,7 +14,7 @@ const Input = ({
     minLength,
     maxLength,
     id,
-    pattern
+    pattern,
 }) => {
     const [isFocused, setIsFocused] = useState(false);
 
@@ -62,7 +62,9 @@ const Register = () => {
     const [referral, setReferral] = useState("");
     const [file, setFile] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
-    const [isDualBooted, setIsDualBooted] = useState("Do you have linux installed?");
+    const [isDualBooted, setIsDualBooted] = useState(
+        "Do you have linux installed?"
+    );
 
     const validatePhone = (phone) => {
         const pattern = /^[5-9]\d{9}$/;
@@ -147,11 +149,11 @@ const Register = () => {
         setIsLoading(false);
     };
 
-    useEffect(() => {
-        document.title = "Register | Linux Diary";
-    }, []);
     return (
-        <div id="register" className="px-6 md:px-14 py-24 relative flex items-center justify-center">
+        <div
+            id="register"
+            className="px-6 md:px-14 py-24 relative flex items-center justify-center"
+        >
             <div className="bg-white/30  shadow-md rounded-lg md:flex md:space-x-4 justify-center items-center z-50 w-full">
                 <div className="w-full p-6 h-full">
                     <h1 className="text-4xl font-[900]">Register!</h1>
@@ -245,17 +247,15 @@ const Register = () => {
                 </div>
                 <div className="w-full flex flex-col space-y-2 justify-center items-center p-4 md:p-24 mb:p-48">
                     <img src={RegisterTux} className="lg:w-[80%] w-full "></img>
-                    <div className="bg-white w-full cursor-pointer shadow-lg rounded-xl p-4 flex flex-col space-y-2 items-center justify-center ">
+                    <div
+                        className="bg-white w-full cursor-pointer shadow-lg rounded-xl p-4 flex flex-col space-y-2 items-center justify-center "
+                        onClick={() =>
+                            document.getElementById("paymentImgUpload").click()
+                        }
+                    >
                         {!file ? (
                             <>
-                                <BiUpload
-                                    className="text-4xl font-bold text-black"
-                                    onClick={() =>
-                                        document
-                                            .getElementById("paymentImgUpload")
-                                            .click()
-                                    }
-                                />
+                                <BiUpload className="text-4xl font-bold text-black" />
                                 <p className="text-sm text-black">
                                     Upload Payment Screenshot
                                 </p>{" "}

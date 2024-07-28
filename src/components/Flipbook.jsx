@@ -4,7 +4,11 @@ import CoverImg from "../assets/cover.png";
 
 const Flipbook = () => {
     const [dimensions, setDimensions] = useState({ width: 400, height: 600 });
+    const [isClosed, setIsClosed] = useState(true);
 
+    useEffect(() => {
+        setIsClosed(true);
+    }, []);
     return (
         <div className="w-screen flex items-center justify-center overflow-hidden p-4 sm:p-16">
             <HTMLFlipBook
@@ -19,9 +23,15 @@ const Flipbook = () => {
                 showCover={true}
                 mobileScrollSupport={true}
                 onFlip={(e) => {
-                    console.log("flipped", e);
+                    if(e.data === 0) {
+                        setIsClosed(true);
+                    }else{
+                        setIsClosed(false);
+                    }
                 }}
                 startPage={0}
+                className={`translate-x-0 transition-all md:${isClosed ? "-translate-x-[25%]": "-translate-x-0"}`}
+                id="flipbook"
             >
                 {/* Cover Page */}
                 <div className="">

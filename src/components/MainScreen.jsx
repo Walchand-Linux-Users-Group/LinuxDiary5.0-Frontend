@@ -62,7 +62,7 @@ const MainScreen = () => {
             <div className="pt-28 lg:pt-40 text-center">
                 <h1
                     ref={headingRef}
-                    className="font-bold text-6xl mb-10 lg:mb-0 lg:text-8xl lg:leading-[6rem] lg:font-extrabold px-1"
+                    className="font-bold text-6xl mb-10 lg:mb-0 lg:text-[10rem] lg:leading-[6rem] lg:font-extrabold px-1"
                     style={{
                         fontFamily: "Poppins, sans-serif",
                     }}
@@ -70,7 +70,7 @@ const MainScreen = () => {
                     LINUXDIARY 5.0
                 </h1>
             </div>
-            <div className="md:w-3/4">
+            <div className="md:w-2/3">
                 <img
                     src={chillingPengs}
                     className="h-72 lg:h-auto mx-auto great"
