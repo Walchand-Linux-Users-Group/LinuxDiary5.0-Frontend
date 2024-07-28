@@ -60,7 +60,7 @@ const TravelCard = ({ type, title, description, text, imageSrc }) => {
             if (curCard.current) {
                 const top = curCard.current.getBoundingClientRect().top;
                 const bottom = curCard.current.getBoundingClientRect().bottom;
-                if (top < window.innerHeight - 200 && bottom > 200 ) {
+                if (top < window.innerHeight - 400 && bottom > 350 ) {
                     setIsFlipped(true);
                 } else {
                     setIsFlipped(false);
@@ -76,7 +76,7 @@ const TravelCard = ({ type, title, description, text, imageSrc }) => {
             onMouseLeave={handleFlip}
         >
             <div className={`card ${isFlipped ? "flipped" : ""}`}>
-                <div className={`card-front card-front--${type}`}>
+                <div className={`card-front card-front`}>
                     <img src={imageSrc} alt={title} className="card-image" />
                     <div className="card-content">
                         <h2 className="card-front__heading">{title}</h2>
