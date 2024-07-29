@@ -1,10 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import HTMLFlipBook from "react-pageflip";
 import CoverImg from "../assets/cover.png";
+import PlaceholderImg from "../assets/diary/placeholder.png";
+import Img1 from "../assets/diary/Img1.jpg";
+import Img2 from "../assets/diary/Img2.jpg";
+import Img3 from "../assets/diary/Img3.jpg";
+import Img4 from "../assets/diary/Img4.jpg";
+import Img5 from "../assets/diary/Img5.jpg";
+import Img6 from "../assets/diary/Img6.jpg";
+import Img7 from "../assets/diary/Img7.jpg";
+import Img8 from "../assets/diary/Img8.jpg";
+import Img9 from "../assets/diary/Img9.jpg";
+import Img10 from "../assets/diary/Img10.jpg";
+import Img11 from "../assets/diary/Img11.jpg";
 
 const Flipbook = () => {
     const [dimensions, setDimensions] = useState({ width: 400, height: 600 });
     const [isClosed, setIsClosed] = useState(true);
+    const images = [
+        Img1,
+        Img2,
+        Img3,
+        Img4,
+        Img5,
+        Img6,
+        Img7,
+        Img8,
+        Img9,
+        Img10,
+        Img11,
+    ];
 
     useEffect(() => {
         setIsClosed(true);
@@ -23,14 +48,16 @@ const Flipbook = () => {
                 showCover={true}
                 mobileScrollSupport={true}
                 onFlip={(e) => {
-                    if(e.data === 0) {
+                    if (e.data === 0) {
                         setIsClosed(true);
-                    }else{
+                    } else {
                         setIsClosed(false);
                     }
                 }}
                 startPage={0}
-                className={`translate-x-0 transition-all md:${isClosed ? "-translate-x-[25%]": "-translate-x-0"}`}
+                className={`translate-x-0 transition-all md:${
+                    isClosed ? "-translate-x-[25%]" : "-translate-x-0"
+                }`}
                 id="flipbook"
             >
                 {/* Cover Page */}
@@ -42,26 +69,44 @@ const Flipbook = () => {
                     ></img>
                 </div>
                 {/* Inner Pages */}
-                {[...Array(10)].map((_, index) => (
+                {[...Array(6)].map((_, index) => (
                     <div
                         key={index}
                         className="bg-[#fafafa] rounded-lg h-full w-full shadow-custom-inset"
                     >
                         <div className="w-full h-full flex flex-col justify-center items-center space-y-6 sm:space-y-12 z-10 p-4 sm:p-8">
-                            <img
-                                src={`https://via.placeholder.com/450x300?text=Image+${
-                                    index * 2 + 1
-                                }`}
-                                alt={`placeholder ${index * 2 + 1}`}
-                                className="w-full h-auto"
-                            />
-                            <img
-                                src={`https://via.placeholder.com/450x300?text=Image+${
-                                    index * 2 + 2
-                                }`}
-                                alt={`placeholder ${index * 2 + 2}`}
-                                className="w-full h-auto"
-                            />
+                            <Suspense
+                                fallback={
+                                    <img
+                                        src={PlaceholderImg}
+                                        alt={`placeholder ${index * 2 + 1}`}
+                                        className="w-full h-auto"
+                                    ></img>
+                                }
+                            >
+                                <img
+                                    src={images[index * 2]}
+                                    alt={`placeholder ${index * 2 + 2}`}
+                                    className="w-full h-auto"
+                                />
+                            </Suspense>
+                            {[index * 2 + 1] < 11 && (
+                                <Suspense
+                                    fallback={
+                                        <img
+                                            src={PlaceholderImg}
+                                            alt={`placeholder ${index * 2 + 1}`}
+                                            className="w-full h-auto"
+                                        ></img>
+                                    }
+                                >
+                                    <img
+                                        src={images[index * 2 + 1]}
+                                        alt={`placeholder ${index * 2 + 2}`}
+                                        className="w-full h-auto"
+                                    />
+                                </Suspense>
+                            )}
                         </div>
                     </div>
                 ))}
