@@ -27,7 +27,7 @@ const Collaboration = () => {
                 onClick={() => {
                     document
                         .getElementById("register")
-                        .scrollIntoView({ behavior: "smooth", block: "center" });
+                        .scrollIntoView({ behavior: "smooth" });
                 }}
             >
                 Register Now
