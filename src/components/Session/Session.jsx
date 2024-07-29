@@ -74,6 +74,7 @@ const TravelCard = ({ type, title, description, text, imageSrc }) => {
             className="card-section"
             onMouseEnter={handleFlip}
             onMouseLeave={handleFlip}
+            id="sessions"
         >
             <div className={`card ${isFlipped ? "flipped" : ""}`}>
                 <div className={`card-front card-front`}>

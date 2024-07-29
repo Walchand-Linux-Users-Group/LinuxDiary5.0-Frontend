@@ -9,7 +9,7 @@ import "./CollabCSS.css";
 const Collaboration = () => {
     return (
         // <Section crosses className="bg-transparent">
-        <div className="container lg:flex bg-transparent sm:pt-16 ">
+        <div className="container lg:flex bg-transparent sm:pt-16 " id="more">
             <div className="max-w-[25rem] py-8 align">
                 <h2 className="text-4xl lg:text-6xl text-center lg:text-left font-semibold mb-4 md:mb-8">
                     Wargames

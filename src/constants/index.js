@@ -54,9 +54,9 @@ export const navigation = [
   },
   {
     id: "3",
-    title: "About us",
-    url: "#about",
-  },
+    title: "register",
+    url: "#register",
+  }
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
