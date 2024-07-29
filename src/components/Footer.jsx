@@ -1,7 +1,7 @@
 import React from "react";
 import FooterImg from "../assets/footer2.png";
-import WlugImg from "../assets/wlug.png";   
-import { navigation } from "../constants";;
+import WlugImg from "../assets/wlug.png";
+import { navigation } from "../constants";
 import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
@@ -14,10 +14,34 @@ const Footer = () => {
                         Stay Tuned!
                     </h1>
                     <div className="flex space-x-3 justify-center">
-                        <FaInstagram className="text-3xl text-gray-800 cursor-pointer" />
+                        {/* <FaInstagram className="text-3xl text-gray-800 cursor-pointer" />
                         <FaLinkedin className="text-3xl text-gray-800 cursor-pointer" />
                         <FaGithub className="text-3xl text-gray-800 cursor-pointer" />
-                        <FaXTwitter className="text-3xl text-gray-800 cursor-pointer" />
+                        <FaXTwitter className="text-3xl text-gray-800 cursor-pointer" /> */}
+                        <a
+                            href="https://instagram.com/wcewlug?igshid=YmMyMTA2M2Y="
+                            target="_blank"
+                        >
+                            <FaInstagram className="text-3xl text-gray-800 cursor-pointer hover:scale-110 hover:text-blue-400 transition-all" />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/company/wlug-club/"
+                            target="_blank"
+                        >
+                            <FaLinkedin className="text-3xl text-gray-800 cursor-pointer hover:scale-110 hover:text-blue-400 transition-all" />
+                        </a>
+                        <a
+                            href="https://github.com/Walchand-Linux-Users-Group"
+                            target="_blank"
+                        >
+                            <FaGithub className="text-3xl text-gray-800 cursor-pointer hover:scale-110 hover:text-blue-400 transition-all" />
+                        </a>
+                        <a
+                            href="https://mobile.twitter.com/wcewlug"
+                            target="_blank"
+                        >
+                            <FaXTwitter className="text-3xl text-gray-800 cursor-pointer hover:scale-110 hover:text-blue-400 transition-all" />
+                        </a>
                     </div>
                 </div>
                 <div className="flex flex-col space-y-1 text-center md:text-left">

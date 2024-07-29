@@ -5,6 +5,8 @@ import RegisterTux from "../assets/registerTux.png";
 import { BiCross, BiUpload } from "react-icons/bi";
 import { RxCrossCircled } from "react-icons/rx";
 import Dropdown from "./DropDown";
+import Swal from "sweetalert2";
+import { CgSearchLoading } from "react-icons/cg";
 const Input = ({
     label,
     type,
@@ -15,6 +17,7 @@ const Input = ({
     maxLength,
     id,
     pattern,
+    value,
 }) => {
     const [isFocused, setIsFocused] = useState(false);
 
@@ -36,6 +39,7 @@ const Input = ({
                 id={id}
                 className=" bg-transparent outline-none border-b pt-4 py-1 text-base border-black w-full"
                 autoComplete="off"
+                value={value}
             ></input>
             <label
                 htmlFor={id}
@@ -71,50 +75,93 @@ const Register = () => {
         return pattern.test(phone);
     };
 
+    const showAlert = (icon, title, text) => {
+        Swal.fire({
+            icon: icon,
+            title: title,
+            text: text,
+            background: "white",
+            confirmButtonColor: icon === "error" ? "#f97316" : "#78eb91",
+        });
+    };
     const isValidInput = () => {
-        if (name.length < 3 || name.length > 50) {
-            alert("Name should be between 3 and 50 characters");
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (name.length < 1) {
+            showAlert("error", "Invalid Name", "Name is required");
             return false;
         }
-        if (email.length === 0) {
-            alert("Email is required");
+        if (email.length === 0 || emailPattern.test(email) === false) {
+            showAlert("error", "Invalid Email", "Email is required");
             return false;
         }
         if (!validatePhone(phone)) {
-            alert("Invalid phone number");
+            showAlert(
+                "error",
+                "Invalid Phone Number",
+                "Phone number is invalid"
+            );
             return false;
         }
         if (college.length === 0) {
-            alert("College name is required");
+            showAlert("error", "Invalid College", "College name is required");
             return false;
         }
         if (year.length === 0) {
-            alert("Year of study is required");
+            showAlert("error", "Invalid Year", "Year of study is required");
             return false;
         }
         if (branch.length === 0) {
-            alert("Branch is required");
+            showAlert("error", "Invalid Branch", "Branch is required");
             return false;
         }
         if (transaction.length === 0) {
-            alert("Transaction ID is required");
+            showAlert(
+                "error",
+                "Invalid Transaction ID",
+                "Transaction ID is required"
+            );
             return false;
         }
         if (isDualBooted !== "Yes" && isDualBooted !== "No") {
-            alert("Please select if you have linux installed on your PC");
-            return false;
+            showAlert(
+                "error",
+                "Invalid Input",
+                "Please select if you have linux installed"
+            );
+            return;
         }
         return true;
     };
     const register = async (e) => {
         e.preventDefault();
         setIsLoading(true);
+        Swal.fire({
+            showConfirmButton: false,
+            background: "white",
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+            html: `
+            <div class="flex flex-col items-center justify-center space-y-3">
+                  <svg class="mr-3 h-10 w-10 animate-spin text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+                <p class="text-gray-800 text-lg font-semibold">Please wait...</p>
+                </div>`,
+        });
+
         if (!isValidInput()) {
             setIsLoading(false);
             return;
         }
         if (file === null) {
-            alert("Please upload payment screenshot");
+            Swal.close();
+            loadingAlert.showAlert(
+                "error",
+                "Invalid Input",
+                "Please upload payment screenshot"
+            );
             setIsLoading(false);
             return;
         }
@@ -139,13 +186,30 @@ const Register = () => {
             );
             const data = await res.json();
             if (data.success) {
-                alert("Registered Successfully");
+                Swal.close();
+                showAlert(
+                    "success",
+                    "Registered Successfully",
+                    "See you at the event!"
+                );
+                setName("");
+                setEmail("");
+                setPhone("");
+                setCollege("");
+                setYear("");
+                setBranch("");
+                setTransaction("");
+                setReferral("");
+                setFile(null);
+                setIsDualBooted("Do you have linux installed?");
             } else {
-                alert("Failed to register");
+                throw new Error(data.message);
             }
         } catch (err) {
-            alert("Failed to register");
+            Swal.close();
+            showAlert("error", "Failed to register", "Please try again later");
         }
+
         setIsLoading(false);
     };
 
@@ -169,6 +233,7 @@ const Register = () => {
                             maxLength={50}
                             id="name"
                             onChange={(e) => setName(e.target.value)}
+                            value={name}
                         />
                         <Input
                             label="Email"
@@ -176,6 +241,7 @@ const Register = () => {
                             required={true}
                             id="email"
                             onChange={(e) => setEmail(e.target.value)}
+                            value={email}
                         />
                         <Input
                             label={"Phone No."}
@@ -185,6 +251,7 @@ const Register = () => {
                             maxLength={10}
                             id={"phone"}
                             onChange={(e) => setPhone(e.target.value)}
+                            value={phone}
                         />
                         <Input
                             label={"College Name"}
@@ -192,6 +259,7 @@ const Register = () => {
                             required={true}
                             id={"college"}
                             onChange={(e) => setCollege(e.target.value)}
+                            value={college}
                         />
                         <Input
                             label={"Year of Study"}
@@ -199,6 +267,7 @@ const Register = () => {
                             required={true}
                             id={"year"}
                             onChange={(e) => setYear(e.target.value)}
+                            value={year}
                         />
                         <Input
                             label={"Branch"}
@@ -206,6 +275,7 @@ const Register = () => {
                             required={true}
                             id={"branch"}
                             onChange={(e) => setBranch(e.target.value)}
+                            value={branch}
                         />
                         <Input
                             label={"Transaction ID"}
@@ -213,6 +283,7 @@ const Register = () => {
                             required={true}
                             id={"transaction"}
                             onChange={(e) => setTransaction(e.target.value)}
+                            value={transaction}
                         />
 
                         <Dropdown
@@ -226,6 +297,7 @@ const Register = () => {
                             type={"text"}
                             id={"referral"}
                             onChange={(e) => setReferral(e.target.value)}
+                            value={referral}
                         />
 
                         <div className="space-y-4 sm:space-y-0 sm:flex sm:justify-end sm:space-x-4">
