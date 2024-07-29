@@ -2,7 +2,13 @@ import React from "react";
 import FooterImg from "../assets/footer2.png";
 import WlugImg from "../assets/wlug.png";
 import { navigation } from "../constants";
-import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter, FaDiscord } from "react-icons/fa6";
+import {
+    FaGithub,
+    FaInstagram,
+    FaLinkedin,
+    FaXTwitter,
+    FaDiscord,
+} from "react-icons/fa6";
 
 const Footer = () => {
     return (
@@ -58,7 +64,9 @@ const Footer = () => {
                     ))}
                 </div>
                 <div className="space-y-2">
-                    <img src={WlugImg} className="w-48 mx-auto"></img>
+                    <a href="https://www.wcewlug.org/" target="_blank">
+                        <img src={WlugImg} className="w-48 mx-auto"></img>
+                    </a>
                     <p className="text-[10px]">
                         © 2024 WCEWLUG, ALL RIGHTS RESERVED
                     </p>
