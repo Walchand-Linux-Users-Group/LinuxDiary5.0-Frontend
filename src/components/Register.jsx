@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MainImg from "../assets/main/chillingPengs.png";
 import SnowfallEffect from "./SnowfallEffect";
-import RegisterTux from "../assets/registerTux.png";
+import RegisterTux from "../assets/tuxRegistration.png";
 import { BiCross, BiUpload } from "react-icons/bi";
 import { RxCrossCircled } from "react-icons/rx";
 import Dropdown from "./DropDown";
@@ -67,7 +67,7 @@ const Register = () => {
     const [file, setFile] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [isDualBooted, setIsDualBooted] = useState(
-        "Do you have linux installed?"
+        "Do you have Linux installed?"
     );
 
     const validatePhone = (phone) => {
@@ -134,6 +134,19 @@ const Register = () => {
     };
     const register = async (e) => {
         e.preventDefault();
+
+        if (!isValidInput()) {
+            return;
+        }
+        if (file === null) {
+            showAlert(
+                "error",
+                "Invalid Input",
+                "Please upload payment screenshot"
+            );
+            return;
+        }
+
         setIsLoading(true);
         Swal.fire({
             showConfirmButton: false,
@@ -150,21 +163,6 @@ const Register = () => {
                 <p class="text-gray-800 text-lg font-semibold">Please wait...</p>
                 </div>`,
         });
-
-        if (!isValidInput()) {
-            setIsLoading(false);
-            return;
-        }
-        if (file === null) {
-            Swal.close();
-            loadingAlert.showAlert(
-                "error",
-                "Invalid Input",
-                "Please upload payment screenshot"
-            );
-            setIsLoading(false);
-            return;
-        }
         const formData = new FormData();
         formData.append("name", name);
         formData.append("email", email);
@@ -209,7 +207,7 @@ const Register = () => {
             Swal.close();
             showAlert("error", "Failed to register", "Please try again later");
         }
-
+        
         setIsLoading(false);
     };
 
@@ -220,7 +218,9 @@ const Register = () => {
         >
             <div className="bg-white/30  shadow-md rounded-lg md:flex md:space-x-4 justify-center items-center z-50 w-full">
                 <div className="w-full p-6 h-full">
-                    <h1 className="text-4xl font-[900] text-gray-500">Register!</h1>
+                    <h1 className="text-4xl font-[900] text-gray-500">
+                        Register!
+                    </h1>
                     <p className="my-2 mb-4 text-sm sm:text-base text-gray-500">
                         Fill the details below to secure your seat.
                     </p>

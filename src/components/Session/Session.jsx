@@ -7,7 +7,8 @@ import NetworkImg from "../../assets/roadmap/network.png";
 
 const Session = () => {
     return (
-        <div className="lg:py-20 py-10">
+        <div className="lg:py-20 py-10" 
+        id="sessions">
             <div className="title-sess">
                 <h1 className="text-white font-bold text-center text-4xl lg:text-6xl lg:mb-15">
                     Roadmap
@@ -74,7 +75,6 @@ const TravelCard = ({ type, title, description, text, imageSrc }) => {
             className="card-section"
             onMouseEnter={handleFlip}
             onMouseLeave={handleFlip}
-            id="sessions"
         >
             <div className={`card ${isFlipped ? "flipped" : ""}`}>
                 <div className={`card-front card-front`}>
