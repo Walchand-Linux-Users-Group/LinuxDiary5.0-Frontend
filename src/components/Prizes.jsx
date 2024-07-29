@@ -10,9 +10,9 @@ const Prizes = () => {
             </h1>
 
             <div className="flex flex-col lg:flex-row justify-center lg:gap-16 mx-8 lg:mx-32 my-12 lg:my-16">
-                <div className="w-full lg:h-1/3 lg:w-1/3 mb-12 lg:mb-0 bg-gradient-to-b from-[rgba(71,194,215,0.4)] to-[rgba(39,158,178,0.4)] backdrop-blur-[2px] border border-[rgba(255,255,255,0.2)] rounded-xl flex flex-col items-center justify-center shadow-2xl group hover:bg-indigo-700 hover:border-yellow-500">
+                <div className="w-ful lg:mt-10 lg:h-1/3 lg:w-1/3 mb-12 lg:mb-0 bg-gradient-to-b from-[rgba(71,194,215,0.4)] to-[rgba(39,158,178,0.4)] backdrop-blur-[2px] border border-[rgba(255,255,255,0.2)] rounded-xl flex flex-col items-center justify-center shadow-2xl group hover:bg-indigo-700 hover:border-yellow-500">
                     <img
-                        className="h-60 lg:h-72 object-cover rounded-xl transform transition-transform duration-500 group-hover:scale-110"
+                        className="h-60  lg:h-72 object-cover rounded-xl transform transition-transform duration-500 group-hover:scale-110"
                         src={swagImg}
                         alt="Swags"
                     />
@@ -32,7 +32,7 @@ const Prizes = () => {
                     </h2>
                 </div>
 
-                <div className="w-full lg:h-1/3 lg:w-1/3 bg-gradient-to-b from-[rgba(71,194,215,0.4)] to-[rgba(39,158,178,0.4)] backdrop-blur-[2px] border border-[rgba(255,255,255,0.2)] rounded-xl flex flex-col items-center justify-center shadow-2xl group hover:bg-indigo-700 hover:border-yellow-500">
+                <div className="w-full mt-10 lg:h-1/3 lg:w-1/3 bg-gradient-to-b from-[rgba(71,194,215,0.4)] to-[rgba(39,158,178,0.4)] backdrop-blur-[2px] border border-[rgba(255,255,255,0.2)] rounded-xl flex flex-col items-center justify-center shadow-2xl group hover:bg-indigo-700 hover:border-yellow-500">
                     <img
                         className="h-60 lg:h-72 object-cover rounded-xl transform transition-transform duration-500 group-hover:scale-110"
                         src={cashPrizeImg}

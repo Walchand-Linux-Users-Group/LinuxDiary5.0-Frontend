@@ -7,9 +7,9 @@ import NetworkImg from "../../assets/roadmap/network.png";
 
 const Session = () => {
     return (
-        <div className="py-20">
+        <div className="lg:py-20 py-10">
             <div className="title-sess">
-                <h1 className="text-white font-bold text-center text-3xl lg:text-5xl">
+                <h1 className="text-white font-bold text-center text-4xl lg:text-6xl lg:mb-15">
                     Roadmap
                 </h1>
             </div>
