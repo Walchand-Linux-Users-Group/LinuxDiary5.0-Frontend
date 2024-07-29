@@ -17,7 +17,7 @@ const Collaboration = () => {
 
                 <p className="text-lg mb-4">
                     Dive into our thrilling Wargames competition! Tackle
-                    challenging puzzles, showcase your skills, and compete with
+                    challenging puzzles, showcase your skills and compete with
                     the best. Are you ready to be the champion?
                 </p>
 

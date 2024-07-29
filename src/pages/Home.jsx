@@ -25,11 +25,11 @@ const Home = () => {
             <div className="pt-[2rem] overflow-x-hidden relative z-10 space-y-12">
                 <MainScreen />
                 <Session />
-                <CardCollection />
+                {/* <CardCollection /> */}
                 <Collaboration />
                 <Prizes />
-                <Register />
                 <Flipbook />
+                <Register />
                 <Footer />
             </div>
             <ButtonGradient />
