@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { BottomLine } from "./design/Hero";
+import WlugLogo from "../assets/wlugLogo.png";
 import chillingPengs from "../assets/main/chillingPengs2.png";
 import "./MainScreen.css";
 
@@ -59,7 +59,8 @@ const MainScreen = () => {
             id="home"
             className="lg:h-screen w-full flex flex-col items-center justify-center bg-transparent space-y-4"
         >
-            <div className="pt-28 lg:pt-40 text-center">
+            <div className="pt-28 lg:pt-80 text-center">
+                <img src={WlugLogo} className="w-48 mx-auto absolute left-1/2 -translate-x-[50%] top-4"></img>
                 <h1
                     ref={headingRef}
                     className="font-bold text-6xl mb-10 lg:mb-0 lg:text-[8rem] lg:leading-[6rem] lg:font-extrabold px-1"
