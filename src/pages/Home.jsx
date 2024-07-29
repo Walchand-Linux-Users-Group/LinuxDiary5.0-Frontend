@@ -22,7 +22,7 @@ const Home = () => {
     return (
         <div className="relative gradient-background scroll-smooth">
             <SnowfallEffect /> {/* Add SnowfallEffect component */}
-            <div className="pt-[2rem] overflow-x-hidden relative z-10 space-y-12">
+            <div className=" overflow-x-hidden relative z-10 space-y-12">
                 <MainScreen />
                 <Session />
                 {/* <CardCollection /> */}

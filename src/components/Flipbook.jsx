@@ -38,10 +38,10 @@ const Flipbook = () => {
     }, []);
     return (
         <>
-            <div className="text-white font-bold text-center text-3xl lg:text-5xl ">
-                Previous year LinuxDiary
+            <div className="text-white font-bold text-center text-3xl lg:text-7xl -mb-12">
+                LinuxDiary 4.0
             </div>
-            <div className="w-screen flex items-center justify-center overflow-hidden p-4 sm:p-16">
+            <div className="w-screen flex items-center justify-center overflow-hidden p-4 sm:p-16 -mt-12">
                 <HTMLFlipBook
                     width={dimensions.width}
                     height={dimensions.height}
