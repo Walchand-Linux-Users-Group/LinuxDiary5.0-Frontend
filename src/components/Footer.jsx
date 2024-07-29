@@ -2,7 +2,7 @@ import React from "react";
 import FooterImg from "../assets/footer2.png";
 import WlugImg from "../assets/wlug.png";
 import { navigation } from "../constants";
-import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter, FaDiscord } from "react-icons/fa6";
 
 const Footer = () => {
     return (
@@ -13,11 +13,7 @@ const Footer = () => {
                     <h1 className="text-3xl font-extrabold text-gray-800 mb-2">
                         Stay Tuned!
                     </h1>
-                    <div className="flex space-x-3 justify-center">
-                        {/* <FaInstagram className="text-3xl text-gray-800 cursor-pointer" />
-                        <FaLinkedin className="text-3xl text-gray-800 cursor-pointer" />
-                        <FaGithub className="text-3xl text-gray-800 cursor-pointer" />
-                        <FaXTwitter className="text-3xl text-gray-800 cursor-pointer" /> */}
+                    <div className="flex space-x-1 justify-center">
                         <a
                             href="https://instagram.com/wcewlug?igshid=YmMyMTA2M2Y="
                             target="_blank"
@@ -41,6 +37,12 @@ const Footer = () => {
                             target="_blank"
                         >
                             <FaXTwitter className="text-3xl text-gray-800 cursor-pointer hover:scale-110 hover:text-blue-400 transition-all" />
+                        </a>
+                        <a
+                            href="https://discord.com/invite/3ce8hBZfc8"
+                            target="_blank"
+                        >
+                            <FaDiscord className="text-3xl text-gray-800 cursor-pointer hover:scale-110 hover:text-blue-400 transition-all" />
                         </a>
                     </div>
                 </div>

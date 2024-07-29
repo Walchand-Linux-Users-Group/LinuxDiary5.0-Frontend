@@ -21,6 +21,7 @@
     "react-select": "^5.8.0",
     "react-snowfall": "^2.1.0",
     "scroll-lock": "^2.1.5",
+    "split-type": "^0.3.4",
     "sweetalert2": "^11.12.3"
   },
   "devDependencies": {
