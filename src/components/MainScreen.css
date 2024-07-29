@@ -2,6 +2,18 @@
   animation: float 3s ease-in-out infinite;
 }
 
+@media (max-width: 390px) {
+    .small-screen-heading {
+        font-size: 2rem; /* Adjust this value as needed */
+    }
+}
+
+@media (max-width: 430px) {
+  .small-screen-heading {
+      font-size: 2.6rem; /* Adjust this value as needed */
+  }
+}
+
 @keyframes float {
   0% {
     transform: translateY(0px);

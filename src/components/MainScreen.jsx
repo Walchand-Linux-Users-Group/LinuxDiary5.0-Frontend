@@ -40,16 +40,6 @@ const MainScreen = () => {
                 stagger: 0.1,
                 duration: 1,
                 ease: "back.out(1.7)",
-                // onComplete: () => {
-                //     // Add a subtle hover effect after the animation
-                //     gsap.to(heading, {
-                //         duration: 0.3,
-                //         scale: 1.05,
-                //         ease: "power1.out",
-                //         yoyo: true,
-                //         repeat: 1,
-                //     });
-                // },
             }
         );
     }, []);
@@ -63,7 +53,7 @@ const MainScreen = () => {
                 <img src={WlugLogo} className="w-40  mx-auto absolute left-1/2 -translate-x-[50%] top-4"></img>
                 <h1
                     ref={headingRef}
-                    className="font-bold text-5xl  mb-10 lg:mb-0 lg:text-[5rem] lg:leading-[6rem] lg:font-extrabold px-1"
+                    className="font-bold mb-10 lg:mb-0 lg:text-[5rem] lg:leading-[6rem] lg:font-extrabold px-1 small-screen-heading"
                     style={{
                         fontFamily: "Poppins, sans-serif",
                     }}
