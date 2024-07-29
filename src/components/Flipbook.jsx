@@ -34,8 +34,9 @@ const Flipbook = () => {
     useEffect(() => {
         setIsClosed(true);
     }, []);
-    return (
-        <div className="w-screen flex items-center justify-center overflow-hidden p-4 sm:p-16">
+    return (<>
+        <div className="text-white font-bold text-center text-3xl lg:text-5xl ">Previous year LinuxDiary</div>
+        <div className="w-screen flex items-center justify-center overflow-visible p-4 sm:p-16">
             <HTMLFlipBook
                 width={dimensions.width}
                 height={dimensions.height}
@@ -112,6 +113,7 @@ const Flipbook = () => {
                 ))}
             </HTMLFlipBook>
         </div>
+        </>
     );
 };
 

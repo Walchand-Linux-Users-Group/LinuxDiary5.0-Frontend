@@ -158,7 +158,7 @@ const Register = () => {
                 <div className="w-full p-6 h-full">
                     <h1 className="text-4xl font-[900]">Register!</h1>
                     <p className="my-2 mb-4 text-sm sm:text-base">
-                        Fill the details below to secure your seat
+                        Fill the details below to secure your seat.
                     </p>
                     <form className="flex flex-col space-y-6 md:p-4">
                         <Input
@@ -219,7 +219,7 @@ const Register = () => {
                             selectedItem={isDualBooted}
                             options={["Yes", "No"]}
                             handleItemClick={(item) => setIsDualBooted(item)}
-                            label={"Do you have linux installed ?"}
+                            label={"Do you have linux installed?"}
                         />
                         <Input
                             label={"Referral Code"}
