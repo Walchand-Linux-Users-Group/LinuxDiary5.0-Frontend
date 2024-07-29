@@ -39,7 +39,7 @@ const Prizes = () => {
                         alt="Cash Prize"
                     />
                     <h2 className="text-black text-center text-3xl font-bold py-6 group-hover:text-white">
-                        Cash Prizes
+                    Astonishing Prizes
                     </h2>
                 </div>
             </div>

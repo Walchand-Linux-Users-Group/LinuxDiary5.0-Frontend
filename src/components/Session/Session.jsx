@@ -16,15 +16,15 @@ const Session = () => {
             <div className="card-area">
                 <TravelCard
                     type="city"
-                    title="Into open source"
-                    description="Into open source"
+                    title="FOSS Kickoff"
+                    description="FOSS Kickoff"
                     text="Worried about being an absolute beginner in Linux? Don't fret! We've got you covered with a beginner-friendly session that serves as the perfect introduction to open-source and Linux. You'll gain a solid foundation and discover real-life applications of these technologies."
                     imageSrc={OpenSourceiImg}
                 />
                 <TravelCard
                     type="ski"
-                    title="Linux Unleashed"
-                    description="Linux Unleashed"
+                    title="Route to Root"
+                    description="Route to Root"
                     text="With a strong foundation in place, we will dive into the world of open-source and Linux, empowering you with comprehensive knowledge of crucial commands, the booting process, text editors, process management and the seamless integration of pipelining techniques."
                     imageSrc={PenguinGiftImg}
                 />
