@@ -60,7 +60,7 @@ const MainScreen = () => {
             className="lg:h-screen w-full flex flex-col items-center justify-center bg-transparent space-y-4"
         >
             <div className="pt-28 lg:pt-80 text-center">
-                <img src={WlugLogo} className="w-48 mx-auto absolute left-1/2 -translate-x-[50%] top-4"></img>
+                <img src={WlugLogo} className="w-40 md:w-48 mx-auto absolute left-1/2 -translate-x-[50%] top-4"></img>
                 <h1
                     ref={headingRef}
                     className="font-bold text-6xl mb-10 lg:mb-0 lg:text-[8rem] lg:leading-[6rem] lg:font-extrabold px-1"
