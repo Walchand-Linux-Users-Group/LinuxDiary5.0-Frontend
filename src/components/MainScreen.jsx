@@ -49,10 +49,10 @@ const MainScreen = () => {
             id="home"
             className="lg:h-screen w-full flex flex-col items-center justify-center bg-transparent space-y-4"
         >
-            <div className="pt-28 lg:pt-80 text-center">
+            <div className="pt-28 lg:pt-[15rem] text-center">
                 <img
                     src={WlugLogo}
-                    className="w-40  mx-auto absolute left-1/2 -translate-x-[50%] top-4 cursor-pointer"
+                    className="w-40  mx-auto absolute left-4  top-4 cursor-pointer"
                     onClick={() => {
                         window.open("https://www.wcewlug.org/","_blank");
                     }}

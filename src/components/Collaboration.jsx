@@ -13,7 +13,7 @@ const Collaboration = () => {
                     Wargames
                 </h2>
 
-                <p className="text-lg mb-4 lg:text-left text-center">
+                <p className="text-lg mb-4 lg:text-left text-center font-semibold">
                     Dive into our thrilling Wargames competition! Tackle
                     challenging puzzles, showcase your skills and compete with
                     the best.  Are you ready to be the champion?
