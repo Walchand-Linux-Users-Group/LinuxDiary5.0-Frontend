@@ -218,10 +218,10 @@ const Register = () => {
         >
             <div className="bg-white/30  shadow-md rounded-lg md:flex md:space-x-4 justify-center items-center z-50 w-full">
                 <div className="w-full p-6 h-full">
-                    <h1 className="text-4xl font-[900] text-gray-500">
+                    <h1 className="text-4xl font-[900] text-black">
                         Register!
                     </h1>
-                    <p className="my-2 mb-4 text-sm sm:text-base text-gray-500">
+                    <p className="my-2 mb-4 text-sm sm:text-base text-black">
                         Fill the details below to secure your seat.
                     </p>
                     <form className="flex flex-col space-y-6 md:p-4">

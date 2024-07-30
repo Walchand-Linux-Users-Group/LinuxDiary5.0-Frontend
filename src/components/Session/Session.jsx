@@ -56,19 +56,19 @@ const TravelCard = ({ type, title, description, text, imageSrc }) => {
         setIsFlipped(!isFlipped);
     };
 
-    useEffect(() => {
-        document.addEventListener("scroll", (e) => {
-            if (curCard.current) {
-                const top = curCard.current.getBoundingClientRect().top;
-                const bottom = curCard.current.getBoundingClientRect().bottom;
-                if (top < window.innerHeight - 400 && bottom > 350 ) {
-                    setIsFlipped(true);
-                } else {
-                    setIsFlipped(false);
-                }
-            }
-        });
-    }, []);
+    // useEffect(() => {
+    //     document.addEventListener("scroll", (e) => {
+    //         if (curCard.current) {
+    //             const top = curCard.current.getBoundingClientRect().top;
+    //             const bottom = curCard.current.getBoundingClientRect().bottom;
+    //             if (top < window.innerHeight - 400 && bottom > 350 ) {
+    //                 setIsFlipped(true);
+    //             } else {
+    //                 setIsFlipped(false);
+    //             }
+    //         }
+    //     });
+    // }, []);
     return (
         <div
             ref={curCard}

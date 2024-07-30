@@ -64,7 +64,7 @@ const MainScreen = () => {
                         fontFamily: "Poppins, sans-serif",
                     }}
                 >
-                    LINUXDIARY 5.0
+                    LinuxDiary 5.0
                 </h1>
             </div>
             <div className="md:w-2/3">

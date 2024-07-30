@@ -41,7 +41,7 @@ const Flipbook = () => {
             <div className="text-white font-bold text-center text-3xl lg:text-7xl -mb-12">
                 LinuxDiary 4.0
             </div>
-            <div className="w-screen flex items-center justify-center overflow-hidden p-4 sm:p-16 -mt-12">
+            <div className="w-screen flex items-center justify-center overflow-visible p-4 sm:p-16 -mt-12">
                 <HTMLFlipBook
                     width={dimensions.width}
                     height={dimensions.height}
