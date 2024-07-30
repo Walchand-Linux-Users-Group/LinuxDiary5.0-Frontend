@@ -52,17 +52,14 @@ const MainScreen = () => {
             <div className="pt-28 lg:pt-[15rem] text-center">
                 <img
                     src={WlugLogo}
-                    className="w-40  mx-auto absolute left-4  top-4 cursor-pointer"
+                    className="w-40  mx-auto absolute left-1/2 sm:left-4 sm:translate-x-0 -translate-x-[50%] top-4 cursor-pointer"
                     onClick={() => {
                         window.open("https://www.wcewlug.org/","_blank");
                     }}
                 ></img>
                 <h1
                     ref={headingRef}
-                    className="font-bold mb-10 lg:mb-0 lg:text-[5rem] lg:leading-[6rem] lg:font-extrabold px-1 small-screen-heading"
-                    style={{
-                        fontFamily: "Poppins, sans-serif",
-                    }}
+                    className="font-bold mb-10 lg:mb-0 lg:text-[5rem] lg:leading-[6rem] lg:font-extrabold px-2 small-screen-heading"
                 >
                     LinuxDiary 5.0
                 </h1>

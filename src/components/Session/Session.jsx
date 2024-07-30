@@ -7,8 +7,7 @@ import NetworkImg from "../../assets/roadmap/network.png";
 
 const Session = () => {
     return (
-        <div className="lg:py-20 py-10" 
-        id="sessions">
+        <div className="lg:py-20 py-10" id="sessions">
             <div className="title-sess">
                 <h1 className="text-white font-bold text-center text-4xl lg:text-6xl lg:mb-15">
                     Roadmap
@@ -73,15 +72,36 @@ const TravelCard = ({ type, title, description, text, imageSrc }) => {
         <div
             ref={curCard}
             className="card-section"
-            onMouseEnter={handleFlip}
-            onMouseLeave={handleFlip}
+            onMouseEnter={() => {
+                if (window.innerWidth >= 768) {
+                    handleFlip();
+                }
+            }}
+            onMouseLeave={() => {
+                if (window.innerWidth >= 768) {
+                    handleFlip();
+                }
+            }}
+            onClick={() => {
+                if (window.innerWidth < 768) {
+                    handleFlip();
+                }
+            }}
         >
             <div className={`card ${isFlipped ? "flipped" : ""}`}>
                 <div className={`card-front card-front`}>
-                    <img src={imageSrc} alt={title} className="card-image" />
-                    <div className="card-content">
-                        <h2 className="card-front__heading">{title}</h2>
-                    </div>
+                    {!isFlipped && (
+                        <>
+                            <img
+                                src={imageSrc}
+                                alt={title}
+                                className="card-image"
+                            />
+                            <div className="card-content">
+                                <h2 className="card-front__heading">{title}</h2>
+                            </div>
+                        </>
+                    )}
                 </div>
                 <div className="card-back">
                     <div className="card-content">

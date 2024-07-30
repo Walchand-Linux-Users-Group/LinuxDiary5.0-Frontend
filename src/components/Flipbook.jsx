@@ -38,7 +38,7 @@ const Flipbook = () => {
     }, []);
     return (
         <>
-            <div className="text-white font-bold text-center text-3xl lg:text-7xl -mb-12">
+            <div className="text-white font-bold text-center text-4xl lg:text-6xl -mb-12">
                 LinuxDiary 4.0
             </div>
             <div className="w-screen flex items-center justify-center overflow-visible p-4 sm:p-16 -mt-12">
