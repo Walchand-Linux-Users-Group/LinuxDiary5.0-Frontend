@@ -207,7 +207,7 @@ const Register = () => {
             Swal.close();
             showAlert("error", "Failed to register", "Please try again later");
         }
-        
+
         setIsLoading(false);
     };
 
@@ -277,15 +277,6 @@ const Register = () => {
                             onChange={(e) => setBranch(e.target.value)}
                             value={branch}
                         />
-                        <Input
-                            label={"Transaction ID"}
-                            type={"text"}
-                            required={true}
-                            id={"transaction"}
-                            onChange={(e) => setTransaction(e.target.value)}
-                            value={transaction}
-                        />
-
                         <Dropdown
                             selectedItem={isDualBooted}
                             options={["Yes", "No"]}
@@ -298,6 +289,15 @@ const Register = () => {
                             id={"referral"}
                             onChange={(e) => setReferral(e.target.value)}
                             value={referral}
+                        />
+
+                        <Input
+                            label={"Transaction ID"}
+                            type={"text"}
+                            required={true}
+                            id={"transaction"}
+                            onChange={(e) => setTransaction(e.target.value)}
+                            value={transaction}
                         />
 
                         <div className="space-y-4 sm:space-y-0 sm:flex sm:justify-end sm:space-x-4">
