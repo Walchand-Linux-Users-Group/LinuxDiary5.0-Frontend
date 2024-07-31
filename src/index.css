@@ -18,7 +18,7 @@ html,body,*{
 }
 .gradient-background {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #003cff, white);
+  background: linear-gradient(to bottom, #1877f2, white);
 }
 
 @layer base {
