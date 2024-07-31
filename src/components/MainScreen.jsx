@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import WlugLogo from "../assets/wlugLogo.png";
+import WlugLogo from "../assets/image.png";
 import chillingPengs from "../assets/main/chillingPengs2.png";
 import "./MainScreen.css";
 
