@@ -23,7 +23,6 @@ const Footer = () => {
                         Our sponsors</p>
                     <div className="flex flex-col justify-center items-center md:flex-row md:space-x-3 space-y-3 md:space-y-0">
                         <img src={Sponser1} className="h-20"></img>
-                        <img src={Sponser2} className="h-20"></img>
                         <img src={Sponser3} className="h-20"></img>
                     </div>
                 </div>
