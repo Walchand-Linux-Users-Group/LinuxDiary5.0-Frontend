@@ -20,10 +20,9 @@ const Footer = () => {
             <div className="flex flex-col space-y-10 md:space-y-0 md:flex-row bg-white md:justify-around p-6 items-center lg:px-12">
                 <div>
                     <p className="text-3xl font-extrabold text-gray-800 mb-2 text-center md:text-left">
-                        Our sponsors</p>
+                        Our Sponsors</p>
                     <div className="flex flex-col justify-center items-center md:flex-row md:space-x-3 space-y-3 md:space-y-0">
                         <img src={Sponser1} className="h-20"></img>
-                        <img src={Sponser2} className="h-20"></img>
                         <img src={Sponser3} className="h-20"></img>
                     </div>
                 </div>
