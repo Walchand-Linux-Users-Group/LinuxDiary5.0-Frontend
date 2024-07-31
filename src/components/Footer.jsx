@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa6";
 import Sponser1 from "../assets/disha.jpg";
 import Sponser2 from "../assets/universe.png";
+import Sponser3 from "../assets/sponsor3.png";
 
 const Footer = () => {
     return (
@@ -20,9 +21,10 @@ const Footer = () => {
                 <div>
                     <p className="text-3xl font-extrabold text-gray-800 mb-2 text-center md:text-left">
                         Our sponsors</p>
-                    <div className="flex flex-col justify-center items-center md:flex-row md:space-x-2 space-y-2 md:space-y-0">
+                    <div className="flex flex-col justify-center items-center md:flex-row md:space-x-3 space-y-3 md:space-y-0">
                         <img src={Sponser1} className="h-20"></img>
                         <img src={Sponser2} className="h-20"></img>
+                        <img src={Sponser3} className="h-20"></img>
                     </div>
                 </div>
                 <div className="space-y-2">
