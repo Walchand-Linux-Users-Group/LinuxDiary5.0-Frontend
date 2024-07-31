@@ -17,7 +17,7 @@ const Footer = () => {
     return (
         <div id="about" className="text-black py-2">
             <img src={FooterImg} className=" bg-blend-multiply"></img>
-            <div className="flex flex-col space-y-10 md:space-y-0 md:flex-row bg-white md:justify-around p-6 items-center lg:px-12">
+            <div className="flex flex-col space-y-14 md:space-y-0 md:flex-row bg-white md:justify-around p-6 items-center lg:px-12">
                 <div>
                     <p className="text-3xl font-extrabold text-gray-800 mb-2 text-center md:text-left">
                         Our Sponsors</p>
