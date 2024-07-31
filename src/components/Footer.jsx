@@ -9,16 +9,21 @@ import {
     FaXTwitter,
     FaDiscord,
 } from "react-icons/fa6";
+import Sponser1 from "../assets/disha.jpg";
+import Sponser2 from "../assets/universe.png";
 
 const Footer = () => {
     return (
         <div id="about" className="text-black py-2">
             <img src={FooterImg} className=" bg-blend-multiply"></img>
             <div className="flex flex-col space-y-10 md:space-y-0 md:flex-row bg-white md:justify-around p-6 items-center lg:px-12">
-                <div className="space-y-2">
-                    <a href="https://www.wcewlug.org/" target="_blank">
-                        <img src={WlugImg} className="w-48 mx-auto"></img>
-                    </a>
+                <div>
+                    <p className="text-3xl font-extrabold text-gray-800 mb-2 text-center md:text-left">
+                        Our sponsors</p>
+                    <div className="flex flex-col justify-center items-center md:flex-row md:space-x-2 space-y-2 md:space-y-0">
+                        <img src={Sponser1} className="h-20"></img>
+                        <img src={Sponser2} className="h-20"></img>
+                    </div>
                 </div>
                 <div className="space-y-2">
                     <h1 className="text-3xl font-extrabold text-gray-800 mb-2 text-center md:text-left">
@@ -58,7 +63,12 @@ const Footer = () => {
                     </div>
                     <p className="text-[14px]">
                         © 2024 WCEWLUG, ALL RIGHTS RESERVED
-                    </p>    
+                    </p>
+                </div>
+                <div className="space-y-2">
+                    <a href="https://www.wcewlug.org/" target="_blank">
+                        <img src={WlugImg} className="w-48 mx-auto"></img>
+                    </a>
                 </div>
             </div>
         </div>

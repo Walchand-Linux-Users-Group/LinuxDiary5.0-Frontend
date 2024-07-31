@@ -216,12 +216,12 @@ const Register = () => {
             id="register"
             className="px-6 md:px-14 py-24 relative flex items-center justify-center"
         >
-            <div className="bg-white/30  shadow-md rounded-lg md:flex md:space-x-4 justify-center items-center z-50 w-full">
+            <div className="bg-white/30  shadow-md rounded-lg flex flex-col-reverse md:flex-row md:space-x-4 justify-center items-center z-50 w-full">
                 <div className="w-full p-6 h-full">
-                    <h1 className="text-4xl font-[900] text-black">
+                    <h1 className="text-4xl font-[900] text-black hidden md:block">
                         Register!
                     </h1>
-                    <p className="my-2 mb-4 text-sm sm:text-base text-black">
+                    <p className="my-2 mb-4 text-sm sm:text-base text-black hidden md:block">
                         Fill the details below to secure your seat.
                     </p>
                     <form className="flex flex-col space-y-6 md:p-4">
@@ -299,8 +299,43 @@ const Register = () => {
                             onChange={(e) => setTransaction(e.target.value)}
                             value={transaction}
                         />
-
-                        <div className="space-y-4 sm:space-y-0 sm:flex sm:justify-end sm:space-x-4">
+                        <div
+                            className="bg-white w-full cursor-pointer shadow-lg rounded-xl p-4 flex-col space-y-2 items-center justify-center flex md:hidden"
+                            onClick={() =>
+                                document
+                                    .getElementById("paymentImgUpload")
+                                    .click()
+                            }
+                        >
+                            {!file ? (
+                                <>
+                                    <BiUpload className="text-4xl font-bold text-black" />
+                                    <p className="text-sm text-black">
+                                        Upload Payment Screenshot
+                                    </p>{" "}
+                                    <input
+                                        type="file"
+                                        className="hidden"
+                                        accept="image/*"
+                                        onChange={(e) =>
+                                            setFile(e.target.files[0])
+                                        }
+                                        id="paymentImgUpload"
+                                    ></input>
+                                </>
+                            ) : (
+                                <>
+                                    <div className="flex text-black justify-between w-full p-2 text-lg">
+                                        <p>{file.name}</p>
+                                        <RxCrossCircled
+                                            className="text-black text-3xl ml-2"
+                                            onClick={() => setFile(null)}
+                                        />
+                                    </div>
+                                </>
+                            )}
+                        </div>
+                        <div className="space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:space-x-4">
                             <button
                                 className=" text-white rounded-lg w-full sm:w-fit px-12 bg-cyan-500 py-3 text-xl font-semibold shadow-xl cursor-pointer hover:bg-cyan-600 hover:scale-105 transition-all min-w-48"
                                 type="submit"
@@ -318,9 +353,15 @@ const Register = () => {
                     </form>
                 </div>
                 <div className="w-full flex flex-col space-y-2 justify-center items-center p-4 md:p-24 mb:p-48">
+                    <h1 className="text-4xl font-[900] text-black block md:hidden text-left w-full">
+                        Register!
+                    </h1>
+                    <p className="my-2 mb-4 text-sm sm:text-base text-black block md:hidden text-left w-full">
+                        Fill the details below to secure your seat.
+                    </p>
                     <img src={RegisterTux} className="lg:w-[80%] w-full "></img>
                     <div
-                        className="bg-white w-full cursor-pointer shadow-lg rounded-xl p-4 flex flex-col space-y-2 items-center justify-center "
+                        className="bg-white w-full cursor-pointer shadow-lg rounded-xl p-4 flex-col space-y-2 items-center justify-center hidden md:flex"
                         onClick={() =>
                             document.getElementById("paymentImgUpload").click()
                         }
