@@ -281,7 +281,7 @@ const Register = () => {
                             selectedItem={isDualBooted}
                             options={["Yes", "No"]}
                             handleItemClick={(item) => setIsDualBooted(item)}
-                            label={"Do you have linux installed?"}
+                            label={"Do you have Linux installed?"}
                         />
                         <Input
                             label={"Referral Code"}
