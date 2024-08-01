@@ -39,7 +39,7 @@ const Session = () => {
                     type="camping"
                     title="Net-Wars"
                     description="Net-Wars"
-                    text="Seeking knowledge and excitement? Join our captivating journey through the intricate worlds of GUI and CLI, unveiling the remarkable advantages of CLI. Together, we'll explore advanced commands, essential networking techniques and many more."
+                    text="Dive into the fascinating world of Networking in Linux! Unravel network interfaces, IP addresses, essential protocols, and commands. But that's not all - we'll also explore the thrilling realm of network security with a live phishing session to wrap things up with a bang."
                     imageSrc={NetworkImg}
                 />
             </div>

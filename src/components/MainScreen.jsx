@@ -49,7 +49,7 @@ const MainScreen = () => {
             id="home"
             className="h-screen w-full flex flex-col items-center justify-center bg-transparent space-y-4"
         >
-            <div className="pt-28 lg:pt-[15rem] text-center">
+            <div className="pt-28 text-center">
                 <img
                     src={WlugLogo}
                     className="w-40  mx-auto absolute left-1/2 sm:left-4 sm:translate-x-0 -translate-x-[50%] top-4 cursor-pointer"
@@ -67,7 +67,7 @@ const MainScreen = () => {
             <div className="lg:w-2/3">
                 <img
                     src={chillingPengs}
-                    className="mx-auto great"
+                    className="h-auto mx-auto great"
                     alt="Loading penguins..."
                 />
             </div>
