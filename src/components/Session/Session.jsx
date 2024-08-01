@@ -73,10 +73,10 @@ const TravelCard = ({ type, title, description, text, imageSrc }) => {
             ref={curCard}
             className="card-section"
             onMouseEnter={() => {
-                handleFlip();
+                setIsFlipped(true);
             }}
             onMouseLeave={() => {
-                handleFlip();
+                setIsFlipped(false);
             }}
             onClick={() => {
                 handleFlip();
