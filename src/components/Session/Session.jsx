@@ -39,7 +39,7 @@ const Session = () => {
                     type="camping"
                     title="Net-Wars"
                     description="Net-Wars"
-                    text="Dive into the fascinating world of Networking in Linux! Unravel network interfaces, IP addresses, essential protocols, and commands. But that's not all - we'll also explore the thrilling realm of network security with a live phishing session to wrap things up with a bang."
+                    text="Dive into the fascinating world of Networking in Linux! Unravel network interfaces, IP addresses, essential protocols and commands. But that's not all - we'll also explore the thrilling realm of network security with a live phishing session to wrap things up with a bang."
                     imageSrc={NetworkImg}
                 />
             </div>
@@ -72,21 +72,17 @@ const TravelCard = ({ type, title, description, text, imageSrc }) => {
         <div
             ref={curCard}
             className="card-section"
-            onMouseEnter={() => {
-                if (window.innerWidth >= 768) {
-                    handleFlip();
-                }
-            }}
-            onMouseLeave={() => {
-                if (window.innerWidth >= 768) {
-                    handleFlip();
-                }
-            }}
+            // onMouseEnter={() => {
+            //     handleFlip();
+            // }}
+            // onMouseLeave={() => {
+            //     handleFlip();
+            // }}
             onClick={() => {
-                if (window.innerWidth < 768) {
-                    handleFlip();
-                }
+                handleFlip();
             }}
+            onMouseOver={handleFlip}
+            onMouseOut={handleFlip}
         >
             <div className={`card ${isFlipped ? "flipped" : ""}`}>
                 <div className={`card-front card-front`}>
