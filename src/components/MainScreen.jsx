@@ -59,7 +59,7 @@ const MainScreen = () => {
                 ></img>
                 <h1
                     ref={headingRef}
-                    className="font-bold mt-8 lg:mt-0 mb-10 lg:mb-0 text-[2.7rem] md:text-[5rem] lg:text-[5rem] lg:leading-[6rem] lg:font-extrabold px-2 small-screen-heading"
+                    className="font-bold mt-8 lg:mt-4 mb-10 lg:mb-0 text-[2.7rem] md:text-[5rem] lg:text-[5rem] lg:leading-[6rem] lg:font-extrabold px-2 small-screen-heading"
                 >
                     LinuxDiary 5.0
                 </h1>
