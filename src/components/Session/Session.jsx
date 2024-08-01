@@ -72,17 +72,17 @@ const TravelCard = ({ type, title, description, text, imageSrc }) => {
         <div
             ref={curCard}
             className="card-section"
-            // onMouseEnter={() => {
-            //     handleFlip();
-            // }}
-            // onMouseLeave={() => {
-            //     handleFlip();
-            // }}
+            onMouseEnter={() => {
+                handleFlip();
+            }}
+            onMouseLeave={() => {
+                handleFlip();
+            }}
             onClick={() => {
                 handleFlip();
             }}
-            onMouseOver={handleFlip}
-            onMouseOut={handleFlip}
+            // onMouseOver={handleFlip}
+            // onMouseOut={handleFlip}
         >
             <div className={`card ${isFlipped ? "flipped" : ""}`}>
                 <div className={`card-front card-front`}>
