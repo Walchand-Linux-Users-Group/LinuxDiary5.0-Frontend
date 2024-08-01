@@ -47,7 +47,7 @@ const MainScreen = () => {
     return (
         <div
             id="home"
-            className="h-screen w-full flex flex-col items-center justify-center bg-transparent space-y-4"
+            className="lg:h-screen w-full flex flex-col items-center justify-center bg-transparent space-y-4"
         >
             <div className="pt-28 text-center">
                 <img
@@ -59,12 +59,12 @@ const MainScreen = () => {
                 ></img>
                 <h1
                     ref={headingRef}
-                    className="font-bold mb-10 lg:mb-0 text-[2.7rem] md:text-[5rem] lg:text-[5rem] lg:leading-[6rem] lg:font-extrabold px-2 small-screen-heading"
+                    className="font-bold mt-8 lg:mt-0 mb-10 lg:mb-0 text-[2.7rem] md:text-[5rem] lg:text-[5rem] lg:leading-[6rem] lg:font-extrabold px-2 small-screen-heading"
                 >
                     LinuxDiary 5.0
                 </h1>
             </div>
-            <div className="lg:w-2/3">
+            <div className="sm:w-2/3">
                 <img
                     src={chillingPengs}
                     className="h-auto mx-auto great"
