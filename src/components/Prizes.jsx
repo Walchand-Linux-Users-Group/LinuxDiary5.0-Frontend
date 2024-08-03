@@ -28,7 +28,7 @@ const Prizes = () => {
                         alt="Merchandise"
                     />
                     <h2 className="text-white text-center text-2xl font-bold py-6 group-hover:text-white">
-                        Interesting Merchandise
+                        Interesting <br></br> Merchandise
                     </h2>
                 </div>
 
