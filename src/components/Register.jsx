@@ -217,7 +217,7 @@ const Register = () => {
             className="px-6 md:px-14 py-24 relative flex items-center justify-center"
         >
             <div className="bg-white/30  shadow-md rounded-lg flex flex-col-reverse md:flex-row md:space-x-4 justify-center items-center z-50 w-full min-h-72">
-                {/* <div className="w-full p-6 h-full">
+                <div className="w-full p-6 h-full">
                     <h1 className="text-4xl font-[900] text-black hidden md:block">
                         Register!
                     </h1>
@@ -359,7 +359,7 @@ const Register = () => {
                     <p className="my-2 mb-4 text-sm sm:text-base text-black block md:hidden text-left w-full">
                         Fill the details below to secure your seat.
                     </p>
-                    <img src={RegisterTux} className="lg:w-[80%] w-full "></img>
+                    {/* <img src={RegisterTux} className="lg:w-[80%] w-full "></img> */}
                     <div
                         className="bg-white w-full cursor-pointer shadow-lg rounded-xl p-4 flex-col space-y-2 items-center justify-center hidden md:flex"
                         onClick={() =>
@@ -392,12 +392,12 @@ const Register = () => {
                             </>
                         )}
                     </div>
-                </div> */}
-                <div className="w-full p-6 h-full">
+                </div>
+                {/* <div className="w-full p-6 h-full">
                     <h1 className="text-3xl font-[900] text-black text-center">
                         Registrations are closed. Stay tuned for more events!
                     </h1>
-                </div>
+                </div> */}
             </div>
         </div>
     );
