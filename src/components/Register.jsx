@@ -401,8 +401,8 @@ const Register = () => {
                     </div>
                 </div> */}
                 <div className="w-full p-6 h-full">
-                    <h1 className="text-3xl font-[900] text-black text-center">
-                        Registrations are closed. Stay tuned for more events!
+                    <h1 className="text-3xl md:text-4xl font-[900] text-black text-center">
+                        Registrations are closed, Stay tuned for more events!
                     </h1>
                 </div>
             </div>
