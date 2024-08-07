@@ -210,11 +210,11 @@ const Register = () => {
 
         //     setIsLoading(false);
         Swal.fire({
-            icon:"info",
-            title:"Registrations are closed",
-            text:"Stay tuned for more events!",
-            background:"white",
-            confirmButtonColor:"#40b1ed"
+            icon: "info",
+            title: "Registrations are closed",
+            text: "Stay tuned for more events!",
+            background: "white",
+            confirmButtonColor: "#40b1ed",
         });
     };
 
@@ -401,9 +401,12 @@ const Register = () => {
                     </div>
                 </div> */}
                 <div className="w-full p-6 h-full">
-                    <h1 className="text-3xl md:text-4xl font-[900] text-black text-center">
-                        Registrations are closed, Stay tuned for more events!
+                    <h1 className="text-4xl md:text-5xl font-[900] text-black text-center">
+                        Registrations are closed!
                     </h1>
+                    <p className="my-2 mb-4 text-xl md:text-2xl text-black text-center">
+                        Stay tuned for more events.
+                    </p>
                 </div>
             </div>
         </div>
