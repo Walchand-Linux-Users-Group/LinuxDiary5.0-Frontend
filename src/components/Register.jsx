@@ -135,80 +135,87 @@ const Register = () => {
     const register = async (e) => {
         e.preventDefault();
 
-        if (!isValidInput()) {
-            return;
-        }
-        if (file === null) {
-            showAlert(
-                "error",
-                "Invalid Input",
-                "Please upload payment screenshot"
-            );
-            return;
-        }
+        //     if (!isValidInput()) {
+        //         return;
+        //     }
+        //     if (file === null) {
+        //         showAlert(
+        //             "error",
+        //             "Invalid Input",
+        //             "Please upload payment screenshot"
+        //         );
+        //         return;
+        //     }
 
-        setIsLoading(true);
+        //     setIsLoading(true);
+        //     Swal.fire({
+        //         showConfirmButton: false,
+        //         background: "white",
+        //         allowOutsideClick: false,
+        //         allowEscapeKey: false,
+        //         allowEnterKey: false,
+        //         html: `
+        //         <div class="flex flex-col items-center justify-center space-y-3">
+        //               <svg class="mr-3 h-10 w-10 animate-spin text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        //   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        //   <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        // </svg>
+        //             <p class="text-gray-800 text-lg font-semibold">Please wait...</p>
+        //             </div>`,
+        //     });
+        //     const formData = new FormData();
+        //     formData.append("name", name);
+        //     formData.append("email", email);
+        //     formData.append("phone", phone);
+        //     formData.append("transactionId", transaction);
+        //     formData.append("collegeName", college);
+        //     formData.append("yearOfStudy", year);
+        //     formData.append("branch", branch);
+        //     formData.append("isDualBooted", isDualBooted === "Yes");
+        //     formData.append("referralCode", referral);
+        //     formData.append("paymentImg", file);
+        //     try {
+        //         const res = await fetch(
+        //             "https://linuxdiary5-0-backend-cjli.onrender.com/user/registration",
+        //             {
+        //                 method: "POST",
+        //                 body: formData,
+        //             }
+        //         );
+        //         const data = await res.json();
+        //         if (data.success) {
+        //             Swal.close();
+        //             showAlert(
+        //                 "success",
+        //                 "Registered Successfully",
+        //                 "See you at the event!"
+        //             );
+        //             setName("");
+        //             setEmail("");
+        //             setPhone("");
+        //             setCollege("");
+        //             setYear("");
+        //             setBranch("");
+        //             setTransaction("");
+        //             setReferral("");
+        //             setFile(null);
+        //             setIsDualBooted("Do you have linux installed?");
+        //         } else {
+        //             throw new Error(data.message);
+        //         }
+        //     } catch (err) {
+        //         Swal.close();
+        //         showAlert("error", "Failed to register", "Please try again later");
+        //     }
+
+        //     setIsLoading(false);
         Swal.fire({
-            showConfirmButton: false,
-            background: "white",
-            allowOutsideClick: false,
-            allowEscapeKey: false,
-            allowEnterKey: false,
-            html: `
-            <div class="flex flex-col items-center justify-center space-y-3">
-                  <svg class="mr-3 h-10 w-10 animate-spin text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-    </svg>
-                <p class="text-gray-800 text-lg font-semibold">Please wait...</p>
-                </div>`,
+            icon:"info",
+            title:"Registrations are closed",
+            text:"Stay tuned for more events!",
+            background:"white",
+            confirmButtonColor:"#40b1ed"
         });
-        const formData = new FormData();
-        formData.append("name", name);
-        formData.append("email", email);
-        formData.append("phone", phone);
-        formData.append("transactionId", transaction);
-        formData.append("collegeName", college);
-        formData.append("yearOfStudy", year);
-        formData.append("branch", branch);
-        formData.append("isDualBooted", isDualBooted === "Yes");
-        formData.append("referralCode", referral);
-        formData.append("paymentImg", file);
-        try {
-            const res = await fetch(
-                "https://linuxdiary5-0-backend-cjli.onrender.com/user/registration",
-                {
-                    method: "POST",
-                    body: formData,
-                }
-            );
-            const data = await res.json();
-            if (data.success) {
-                Swal.close();
-                showAlert(
-                    "success",
-                    "Registered Successfully",
-                    "See you at the event!"
-                );
-                setName("");
-                setEmail("");
-                setPhone("");
-                setCollege("");
-                setYear("");
-                setBranch("");
-                setTransaction("");
-                setReferral("");
-                setFile(null);
-                setIsDualBooted("Do you have linux installed?");
-            } else {
-                throw new Error(data.message);
-            }
-        } catch (err) {
-            Swal.close();
-            showAlert("error", "Failed to register", "Please try again later");
-        }
-
-        setIsLoading(false);
     };
 
     return (
@@ -217,7 +224,7 @@ const Register = () => {
             className="px-6 md:px-14 py-24 relative flex items-center justify-center"
         >
             <div className="bg-white/30  shadow-md rounded-lg flex flex-col-reverse md:flex-row md:space-x-4 justify-center items-center z-50 w-full min-h-72">
-                <div className="w-full p-6 h-full">
+                {/* <div className="w-full p-6 h-full">
                     <h1 className="text-4xl font-[900] text-black hidden md:block">
                         Register!
                     </h1>
@@ -299,7 +306,7 @@ const Register = () => {
                             onChange={(e) => setTransaction(e.target.value)}
                             value={transaction}
                         />
-                        {/* <div
+                        <div
                             className="bg-white w-full cursor-pointer shadow-lg rounded-xl p-4 flex-col space-y-2 items-center justify-center flex md:hidden"
                             onClick={() =>
                                 document
@@ -334,7 +341,7 @@ const Register = () => {
                                     </div>
                                 </>
                             )}
-                        </div> */}
+                        </div>
                         <div className="space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:space-x-4">
                             <button
                                 className=" text-white rounded-lg w-full sm:w-fit px-12 bg-cyan-500 py-3 text-xl font-semibold shadow-xl cursor-pointer hover:bg-cyan-600 hover:scale-105 transition-all min-w-48"
@@ -351,16 +358,16 @@ const Register = () => {
                             </button>
                         </div>
                     </form>
-                </div>
-                <div className="w-full flex flex-col space-y-2 justify-center items-center p-4 md:p-24 mb:p-48">
+                </div> */}
+                {/* <div className="w-full flex flex-col space-y-2 justify-center items-center p-4 md:p-24 mb:p-48">
                     <h1 className="text-4xl font-[900] text-black block md:hidden text-left w-full">
                         Register!
                     </h1>
                     <p className="my-2 mb-4 text-sm sm:text-base text-black block md:hidden text-left w-full">
                         Fill the details below to secure your seat.
                     </p>
-                    {/* <img src={RegisterTux} className="lg:w-[80%] w-full "></img> */}
-                    {/* <div
+                    <img src={RegisterTux} className="lg:w-[80%] w-full "></img>
+                    <div
                         className="bg-white w-full cursor-pointer shadow-lg rounded-xl p-4 flex-col space-y-2 items-center justify-center hidden md:flex"
                         onClick={() =>
                             document.getElementById("paymentImgUpload").click()
@@ -391,13 +398,13 @@ const Register = () => {
                                 </div>
                             </>
                         )}
-                    </div> */}
-                </div>
-                {/* <div className="w-full p-6 h-full">
+                    </div>
+                </div> */}
+                <div className="w-full p-6 h-full">
                     <h1 className="text-3xl font-[900] text-black text-center">
                         Registrations are closed. Stay tuned for more events!
                     </h1>
-                </div> */}
+                </div>
             </div>
         </div>
     );
