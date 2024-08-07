@@ -299,7 +299,7 @@ const Register = () => {
                             onChange={(e) => setTransaction(e.target.value)}
                             value={transaction}
                         />
-                        <div
+                        {/* <div
                             className="bg-white w-full cursor-pointer shadow-lg rounded-xl p-4 flex-col space-y-2 items-center justify-center flex md:hidden"
                             onClick={() =>
                                 document
@@ -334,7 +334,7 @@ const Register = () => {
                                     </div>
                                 </>
                             )}
-                        </div>
+                        </div> */}
                         <div className="space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:space-x-4">
                             <button
                                 className=" text-white rounded-lg w-full sm:w-fit px-12 bg-cyan-500 py-3 text-xl font-semibold shadow-xl cursor-pointer hover:bg-cyan-600 hover:scale-105 transition-all min-w-48"
@@ -360,7 +360,7 @@ const Register = () => {
                         Fill the details below to secure your seat.
                     </p>
                     {/* <img src={RegisterTux} className="lg:w-[80%] w-full "></img> */}
-                    <div
+                    {/* <div
                         className="bg-white w-full cursor-pointer shadow-lg rounded-xl p-4 flex-col space-y-2 items-center justify-center hidden md:flex"
                         onClick={() =>
                             document.getElementById("paymentImgUpload").click()
@@ -391,7 +391,7 @@ const Register = () => {
                                 </div>
                             </>
                         )}
-                    </div>
+                    </div> */}
                 </div>
                 {/* <div className="w-full p-6 h-full">
                     <h1 className="text-3xl font-[900] text-black text-center">
