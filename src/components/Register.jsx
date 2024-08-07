@@ -292,7 +292,7 @@ const Register = () => {
                         />
 
                         <Input
-                            label={"Transaction ID"}
+                            label={"UPI transaction ID"}
                             type={"text"}
                             required={true}
                             id={"transaction"}
