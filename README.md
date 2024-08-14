@@ -23,5 +23,3 @@
 <p align="center">© 2023 WCEWLUG, ALL RIGHTS RESERVED</p>
 <hr/>
 </div>
-
-Visit us at- https://www.wcewlug.org/
