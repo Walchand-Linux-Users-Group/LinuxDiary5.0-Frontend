@@ -1,6 +1,6 @@
 # Registration Website Frontend for:
 
-<h1 align="center">🐧LinuxDiary 5.0🐧</h1>
+<!-- <h1 align="center">🐧LinuxDiary 5.0🐧</h1> -->
 
 <img src="https://cdn.discordapp.com/attachments/1249775253564166264/1273262902786265098/Screenshot_57.png?ex=66bdf9fc&is=66bca87c&hm=f4a86b35c4ed0aaeda75669a19b50f89850ac097964ff83b9518b571cd58231a&">
 
