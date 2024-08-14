@@ -24,4 +24,4 @@
 <hr/>
 </div>
 
-Visit at- https://linuxdiary5.0.wcewlug.org/
+Visit us at- https://www.wcewlug.org/
